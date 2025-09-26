@@ -1,0 +1,436 @@
+[
+    {
+        "linea": "capri",
+        "nombre": "cacerola",
+        "medida": "18",
+        "capacidad": 2.1,
+        "comensales": 2,
+        "codigo": 38351830
+    },
+    {
+        "linea": "capri",
+        "nombre": "flip 2.2",
+        "medida": "22x22",
+        "capacidad": 2,
+        "comensales": 2,
+        "codigo": 38123032
+    },
+    {
+        "linea": "capri",
+        "nombre": "cacerola",
+        "medida": "24",
+        "capacidad": 4.5,
+        "comensales": 4,
+        "codigo": 38452430
+    },
+    {
+        "linea": "capri",
+        "nombre": "sartén",
+        "medida": "24",
+        "capacidad": 2.8,
+        "comensales": 3,
+        "codigo": 38252430
+    },
+    {
+        "linea": "capri",
+        "nombre": "cacerola",
+        "medida": "28",
+        "capacidad": 6.1,
+        "comensales": 5,
+        "codigo": 38452830
+    },
+    {
+        "linea": "capri",
+        "nombre": "sartén",
+        "medida": "28",
+        "capacidad": 3.6,
+        "comensales": 5,
+        "codigo": 38252830
+    },
+    {
+        "linea": "capri",
+        "nombre": "bifera con asas",
+        "medida": "33x23",
+        "capacidad": 3.3,
+        "comensales": 4,
+        "codigo": 38753330
+    },
+    {
+        "linea": "capri",
+        "nombre": "cuadrada",
+        "medida": "29",
+        "capacidad": 6.4,
+        "comensales": 6,
+        "codigo": 38752930
+    },
+    {
+        "linea": "capri",
+        "nombre": "fuente rectangular",
+        "medida": "30",
+        "capacidad": 3.6,
+        "comensales": 4,
+        "codigo": 38753030
+    },
+    {
+        "linea": "terra",
+        "nombre": "cacerola",
+        "medida": "18",
+        "capacidad": 2.1,
+        "comensales": 2,
+        "codigo": 38351866
+    },
+    {
+        "linea": "terra",
+        "nombre": "sartén express",
+        "capacidad": 0.5,
+        "comensales": 1,
+        "codigo": 38222002
+    },
+    {
+        "linea": "terra",
+        "nombre": "cacerola",
+        "medida": "24",
+        "capacidad": 4.5,
+        "comensales": 4,
+        "codigo": 38452466
+    },
+    {
+        "linea": "terra",
+        "nombre": "sartén",
+        "medida": "24",
+        "capacidad": 2.8,
+        "comensales": 3,
+        "codigo": 38252466
+    },
+    {
+        "linea": "terra",
+        "nombre": "cacerola",
+        "medida": "28",
+        "capacidad": 6.1,
+        "comensales": 5,
+        "codigo": 38452866
+    },
+    {
+        "linea": "terra",
+        "nombre": "sartén",
+        "medida": "28",
+        "capacidad": 3.6,
+        "comensales": 5,
+        "codigo": 38252866
+    },
+    {
+        "linea": "terra",
+        "nombre": "jarro quick",
+        "capacidad": 1.7,
+        "comensales": 2,
+        "codigo": 38121702
+    },
+    {
+        "linea": "terra",
+        "nombre": "cuadrada",
+        "medida": "29",
+        "capacidad": 6.4,
+        "comensales": 6,
+        "codigo": 38752966
+    },
+    {
+        "linea": "terra",
+        "nombre": "bifera con asas",
+        "medida": "33x23",
+        "capacidad": 3.3,
+        "comensales": 4,
+        "codigo": 38753366
+    },
+    {
+        "linea": "terra",
+        "nombre": "fuente rectangular",
+        "medida": "30",
+        "capacidad": 3.6,
+        "comensales": 4,
+        "codigo": 38753066
+    },
+    {
+        "linea": "terra",
+        "nombre": "flip 2.2",
+        "medida": "22x22",
+        "capacidad": 2,
+        "comensales": 2,
+        "codigo": 38123018
+    },
+    {
+        "linea": "terra",
+        "nombre": "wok",
+        "capacidad": 3,
+        "comensales": 3,
+        "codigo": 38223002
+    },
+    {
+        "linea": "cerámica terra",
+        "nombre": "sartén",
+        "medida": "24",
+        "capacidad": 2.8,
+        "comensales": 3,
+        "codigo": 38252425
+    },
+    {
+        "linea": "cerámica terra",
+        "nombre": "cacerola",
+        "medida": "24",
+        "capacidad": 4.5,
+        "comensales": 4,
+        "codigo": 38452425
+    },
+    {
+        "linea": "cerámica terra",
+        "nombre": "cacerola cuadrada",
+        "medida": "29",
+        "capacidad": 6.4,
+        "comensales": 6,
+        "codigo": 38752925
+    },
+    {
+        "linea": "cerámica terra",
+        "nombre": "cacerola",
+        "medida": "18",
+        "capacidad": 2.1,
+        "comensales": 2,
+        "codigo": 38351825
+    },
+    {
+        "linea": "cerámica terra",
+        "nombre": "flip 2.2",
+        "medida": "22x22",
+        "capacidad": 2,
+        "comensales": 2,
+        "codigo": 38123018
+    },
+    {
+        "linea": "nuit",
+        "nombre": "plancha",
+        "comensales": 6,
+        "codigo": 38734472
+    },
+    {
+        "linea": "nuit",
+        "nombre": "flip",
+        "medida": "24",
+        "capacidad": 2.3,
+        "comensales": 2,
+        "codigo": 38142461
+    },
+    {
+        "linea": "nuit",
+        "nombre": "set 24cm Cacerola 4,6 L | Bifera 2,3 L | Sartén 2 L",
+        "comensales": 5,
+        "codigo": 38941793
+    },
+    {
+        "linea": "nuit",
+        "nombre": "set 28cm Cacerola 6,1 L | Bifera 3,1 L | Sartén 2,7 L",
+        "comensales": 6,
+        "codigo": 38941593
+    },
+    {
+        "linea": "a inducción",
+        "nombre": "bifera",
+        "medida": "24",
+        "codigo": 38647593
+    },
+    {
+        "linea": "a inducción",
+        "nombre": "cacerola con tapa sartén",
+        "medida": "24",
+        "codigo": 38941993
+    },
+    {
+        "linea": "a inducción",
+        "nombre": "set",
+        "medida": "24",
+        "codigo": 1
+    },
+    {
+        "linea": "fusión",
+        "nombre": "cacerola inox",
+        "medida": "24",
+        "capacidad": 4.9,
+        "comensales": 4,
+        "codigo": 38002410
+    },
+    {
+        "linea": "especiales",
+        "nombre": "kamado",
+        "comensales": 6,
+        "codigo": 38773248
+    },
+    {
+        "linea": "especiales",
+        "nombre": "robot de cocina rein",
+        "codigo": 70050010
+    },
+    {
+        "linea": "especiales",
+        "nombre": "set grill & nuit",
+        "comensales": 6,
+        "codigo": 38954472
+    },
+    {
+        "linea": "especiales",
+        "nombre": "urban grill",
+        "medida": "49x27",
+        "comensales": 6,
+        "codigo": 38734372
+    },
+    {
+        "linea": "complementos",
+        "nombre": "savarín terra",
+        "medida": "18",
+        "capacidad": 1,
+        "codigo": 38801585
+    },
+    {
+        "linea": "complementos",
+        "nombre": "savarín terra",
+        "medida": "24",
+        "capacidad": 2,
+        "codigo": 38801385
+    },
+    {
+        "linea": "complementos",
+        "nombre": "savarín terra",
+        "medida": "28",
+        "capacidad": 3.5,
+        "codigo": 38801685
+    },
+    {
+        "linea": "complementos",
+        "nombre": "vaporizador",
+        "medida": "18/28",
+        "codigo": 38802384
+    },
+    {
+        "linea": "complementos",
+        "nombre": "budineras terra x2",
+        "medida": "28-30",
+        "codigo": 38802184
+    },
+    {
+        "linea": "bazar",
+        "nombre": "mandolina de mano con sujetador",
+        "codigo": 60050209
+    },
+    {
+        "linea": "bazar",
+        "nombre": "cuchillo chef",
+        "medida": "33",
+        "codigo": 60050184
+    },
+    {
+        "linea": "bazar",
+        "nombre": "cuchillo santoku",
+        "medida": "31",
+        "codigo": 60050183
+    },
+    {
+        "linea": "bazar",
+        "nombre": "cuchillo utility",
+        "medida": "24",
+        "codigo": 60050182
+    },
+    {
+        "linea": "bazar",
+        "nombre": "cuchillo carving",
+        "medida": "33",
+        "codigo": 60050181
+    },
+    {
+        "linea": "bazar",
+        "nombre": "afilador de cuchillos 4 pasos",
+        "codigo": 60050204
+    },
+    {
+        "linea": "bazar",
+        "nombre": "tabla de bamboo cocina",
+        "medida": "30x40",
+        "codigo": 60050203
+    },
+    {
+        "linea": "bazar",
+        "nombre": "tabla de bamboo cocina",
+        "medida": "30x30",
+        "codigo": 60050202
+    },
+    {
+        "linea": "bazar",
+        "nombre": "rallador de mano grado fino",
+        "medida": "34x60x2",
+        "codigo": 60050199
+    },
+    {
+        "linea": "bazar",
+        "nombre": "rallador de mano grado medio",
+        "medida": "34x60x2",
+        "codigo": 60050198
+    },
+    {
+        "linea": "bazar",
+        "nombre": "rallador de mano grado grueso",
+        "medida": "34x60x2",
+        "codigo": 60050200
+    },
+    {
+        "linea": "bazar",
+        "nombre": "rallador de mano tipo cintas",
+        "medida": "34x60x2",
+        "codigo": 60050205
+    },
+    {
+        "linea": "bazar",
+        "nombre": "bombilla regulable de acero inoxidable con difusor",
+        "codigo": 60050207
+    },
+    {
+        "linea": "bazar",
+        "nombre": "mate térmico",
+        "codigo": 60050197
+    },
+    {
+        "linea": "bazar",
+        "nombre": "set mate neo",
+        "codigo": 60050133
+    },
+    {
+        "linea": "bazar",
+        "nombre": "set mate nuit",
+        "codigo": 60050177
+    },
+    {
+        "linea": "bazar",
+        "nombre": "asas de silicona linea acero inoxidable",
+        "codigo": 60050219
+    },
+    {
+        "linea": "bazar",
+        "nombre": "bowls de acero con tapa set x 3 negro",
+        "codigo": 60050210
+    },
+    {
+        "linea": "bazar",
+        "nombre": "abrelatas 5 en 1",
+        "codigo": 60050109
+    },
+    {
+        "linea": "bazar",
+        "nombre": "aceite arbequina x3 unidades",
+        "codigo": 67700718
+    },
+    {
+        "linea": "bazar",
+        "nombre": "vaso térmico 520ml",
+        "codigo": 60050206
+    },
+    {
+        "linea": "bazar",
+        "nombre": "cafetera italiana essen",
+        "codigo": 60050208
+    }
+]
