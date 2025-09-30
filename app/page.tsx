@@ -1,9 +1,14 @@
 import Link from 'next/link'
 import styles from './page.module.css'
 import { ROUTES } from '@/routes'
-import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFire, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
+import { getLines } from '@/utils'
 
-export default function Home() {
+export default async function Home() {
+
+    const lines = await getLines()
+
     return (
         <>
             <section className={styles.start}>
@@ -28,15 +33,7 @@ export default function Home() {
                     Conocé Todas Las Líneas
                 </h2>
                 <ul className={styles.categories__list}>
-                    {[
-                        'Capri',
-                        'Terra',
-                        'Nuit',
-                        'Induccion',
-                        'Fusion',
-                        'Complementos',
-                        'Bazar',
-                    ].map((item, index) => (
+                    {lines.map((item, index) => (
                         <li className={styles.categories__item} key={index}>
                             <Link href={`${ROUTES.PRODUCTOS}?linea=${item}`}>
                                 {item}
@@ -57,14 +54,26 @@ export default function Home() {
                 <h2 className={styles.why__title}>¿Por qué Elegir Essen?</h2>
                 <ul className={styles.why__list}>
                     {[
-                        { img: '', title: 'Ahorro de Energía', text: 'Cocina más rápido y consume menos gas o electricidad' },
-                        { img: '', title: 'Saludable', text: 'Cocina sin aceite preservando los nutrientes' },
-                        { img: '', title: 'Durabilidad', text: 'Productos que duran toda la vida con garantía' },
+                        {
+                            icon: faFire,
+                            title: 'Ahorro de Energía',
+                            text: 'Cocina más rápido y consume menos gas o electricidad',
+                        },
+                        {
+                            icon: faHeart,
+                            title: 'Saludable',
+                            text: 'Cocina sin aceite preservando los nutrientes',
+                        },
+                        {
+                            icon: faStar,
+                            title: 'Durabilidad',
+                            text: 'Productos que duran toda la vida con garantía',
+                        },
                     ].map((item, index) => (
                         <li className={styles.why__item} key={index}>
-                          <Image src={item.img} alt={item.title} />
-                          <h3>{item.title}</h3>
-                          <p>{item.text}</p>
+                            <FontAwesomeIcon icon={item.icon} />
+                            <h3>{item.title}</h3>
+                            <p>{item.text}</p>
                         </li>
                     ))}
                 </ul>

@@ -1,6 +1,14 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #374151;
+  --secondary: #B91C1C;
+  --accent: #D97706;
+  --success: #10B981;
+
+  --white: #FFFFFF;
+  --light: #F8F8F8;
+  --grey: #6B7280;
+  --dark: #1F2937;
+  --black: #111827;
 }
 
 * {
