@@ -13,7 +13,9 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.title}>
-                <h1>Ollas</h1>
+                <Link href={ROUTES.INICIO}>
+                    <h1>Ollas</h1>
+                </Link>
             </div>
             <FontAwesomeIcon
                 icon={faBars}
