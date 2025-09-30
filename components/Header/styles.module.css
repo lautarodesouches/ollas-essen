@@ -68,3 +68,43 @@
     width: 25px;
     height: 25px;
 }
+
+@media (min-width: 768px) {
+
+    .header{
+        padding: 10px 20px;
+    }
+
+    .header__content {
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        max-height: none;
+        background: none;
+        overflow: visible;
+        transition: none;
+        display: flex !important;
+    }
+
+    .title h1 {
+        font-size: 1.7rem;
+    }
+
+    .nav__item {
+        font-size: 1.2rem;
+    }
+
+    .nav {
+        flex-direction: row;
+        gap: 30px;
+        text-align: left;
+    }
+
+    .header > .icon {
+        display: none;
+    }
+
+    .icons {
+        margin: 0 0 0 30px;
+    }
+}
