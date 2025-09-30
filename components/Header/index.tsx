@@ -39,6 +39,7 @@ export default function Header() {
                             <Link
                                 href={item.link}
                                 onClick={() => setMenuOpen(false)}
+                                className={styles.link}
                             >
                                 {item.name}
                             </Link>

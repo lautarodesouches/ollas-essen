@@ -4,7 +4,7 @@ import './globals.css'
 import { Header, Footer, Whatsapp } from '@/components'
 
 const poppins = Poppins({
-    weight: ['300', '400', '700']
+    weight: ['300', '400', '700'],
 })
 
 export const metadata: Metadata = {

@@ -1,23 +1,27 @@
 :root {
-  --primary: #374151;
-  --secondary: #B91C1C;
-  --accent: #D97706;
-  --success: #10B981;
+    --primary: #374151;
+    --secondary: #b91c1c;
+    --accent: #d97706;
+    --success: #10b981;
 
-  --white: #FFFFFF;
-  --light: #F8F8F8;
-  --grey: #6B7280;
-  --dark: #1F2937;
-  --black: #111827;
+    --white: #ffffff;
+    --light: #f8f8f8;
+    --grey: #6b7280;
+    --dark: #1f2937;
+    --black: #111827;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
 }
