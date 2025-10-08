@@ -4,5 +4,7 @@ export const ROUTES = {
     RECETAS: '/recetas/',
     EMPRENDER: '/emprender/',
     INSTAGRAM: '/link/instagram/',
-    WHATSAPP: '/link/whatsapp/'
+    WHATSAPP: '/link/whatsapp/',
+    TERMS: '/terminos-y-condiciones/',
+    PRIVACY: '/politica-de-privacidad/'
 }
