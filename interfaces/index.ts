@@ -5,4 +5,5 @@ export interface Product {
     medida?: string
     capacidad?: number
     comensales?: number
+    imagenes: string[]
 }

@@ -48,12 +48,13 @@ export default async function Home() {
                 <ul className={styles.products__list}>
                     {randomProducts.map(item => (
                         <Link
-                            href={`${ROUTES.PRODUCTOS}/${item.codigo}/`}
+                            href={`${ROUTES.PRODUCTOS}${item.codigo}/`}
                             key={item.codigo}
                         >
                             <li className={styles.products__item}>
                                 <img
-                                    src={`/images/products/${item.codigo}.jpg`}
+                                    src={`/images/products/${item.imagenes[0]}`}
+                                    alt={item.nombre || ''}
                                 />
                                 <h4>
                                     {item.nombre} - {item.linea}
