@@ -5,7 +5,7 @@ import { ROUTES } from '@/routes'
 export default function Footer() {
     const year = new Date().getFullYear()
     return (
-        <aside className={styles.footer}>
+        <footer className={styles.footer}>
             <p>©{year} Todos los derechos reservados</p>
             <p>
                 <Link href={ROUTES.PRIVACY}>Politica de privacidad</Link>
@@ -13,6 +13,6 @@ export default function Footer() {
             <p>
                 <Link href={ROUTES.TERMS}>Terminos y condiciones</Link>
             </p>
-        </aside>
+        </footer>
     )
 }
