@@ -28,9 +28,17 @@ export async function getProduct(slug: string): Promise<Product | undefined> {
 }
 
 export async function getLines(): Promise<string[]> {
-    const products = await getProducts();
+    const products = await getProducts()
 
-    const lines = Array.from(new Set(products.map(p => p.linea)));
+    const lines = Array.from(new Set(products.map(p => p.linea)))
 
-    return lines;
+    return lines
+}
+
+export async function getRandomProducts(
+    limit: number = 10
+): Promise<Product[]> {
+    const products = await getProducts()
+
+    return products.sort(() => Math.random() - 0.5).slice(0, limit)
 }

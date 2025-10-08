@@ -3,11 +3,12 @@ import styles from './page.module.css'
 import { ROUTES } from '@/routes'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFire, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
-import { getLines } from '@/utils'
+import { getLines, getRandomProducts } from '@/utils'
 
 export default async function Home() {
-
     const lines = await getLines()
+
+    const randomProducts = await getRandomProducts()
 
     return (
         <>
@@ -45,8 +46,21 @@ export default async function Home() {
             <section className={styles.products}>
                 <h2 className={styles.products__title}>Productos Destacados</h2>
                 <ul className={styles.products__list}>
-                    {[].map(item => (
-                        <li className={styles.products__item} key={item}></li>
+                    {randomProducts.map(item => (
+                        <Link
+                            href={`${ROUTES.PRODUCTOS}/${item.codigo}/`}
+                            key={item.codigo}
+                        >
+                            <li className={styles.products__item}>
+                                <img
+                                    src={`/images/products/${item.codigo}.jpg`}
+                                />
+                                <h4>
+                                    {item.nombre} - {item.linea}
+                                </h4>
+                                <button>Ver</button>
+                            </li>
+                        </Link>
                     ))}
                 </ul>
             </section>
