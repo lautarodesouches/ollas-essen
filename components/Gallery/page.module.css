@@ -1,0 +1,54 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Imagen principal */
+.mainImage {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.image {
+    object-fit: contain;
+}
+
+/* Miniaturas */
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.thumb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: border-color 0.2s ease;
+    cursor: pointer;
+}
+
+.thumb:hover {
+    border-color: #ccc;
+}
+
+.thumbImage {
+    object-fit: cover;
+}
+
+.active {
+    border-color: #0070f3;
+}

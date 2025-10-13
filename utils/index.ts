@@ -2,6 +2,19 @@ import { Product } from '@/interfaces'
 import path from 'path'
 import fs from 'fs/promises'
 
+export function capitalize(word: string) {
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+}
+
+export function generateSlug(p: Product) {
+    return `${p.linea}-${p.nombre}${p.medida ? `-${p.medida}` : ''}`
+        .toLowerCase()
+        .normalize('NFD') // separa letras y acentos
+        .replace(/[\u0300-\u036f]/g, '') // elimina acentos
+        .replace(/[^a-z0-9]+/g, '-') // reemplaza todo lo no alfanumérico por guiones
+        .replace(/^-+|-+$/g, '') // limpia guiones del principio y fin
+}
+
 export async function getProducts(): Promise<Product[]> {
     const filePath = path.join(process.cwd(), 'data', 'products.json')
 
@@ -12,16 +25,13 @@ export async function getProducts(): Promise<Product[]> {
     return data
 }
 
-export async function getProduct(slug: string): Promise<Product | undefined> {
+export async function getProductBySlug(
+    slug: string
+): Promise<Product | undefined> {
     const products = await getProducts()
 
     const product = products.find(p => {
-        const generateSlug = `${p.linea}-${p.nombre}${
-            p.medida ? `-${p.medida}` : ''
-        }`
-            .toLowerCase()
-            .replace(/\s+/g, '-')
-        return generateSlug === slug
+        return generateSlug(p) === slug
     })
 
     return product

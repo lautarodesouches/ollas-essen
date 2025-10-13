@@ -1,0 +1,98 @@
+.container {
+    background: var(--light);
+    padding: 20px;
+    flex: 1;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5px;
+}
+
+.nav__span {
+    font-weight: 300;
+}
+
+.nav__link {
+    color: var(--dark);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.product {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.product__subtitle {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--dark);
+    text-transform: capitalize;
+}
+.product__title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--black);
+    text-transform: capitalize;
+}
+.producto__code {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--dark);
+}
+
+.product__info {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product__info div {
+    text-align: center;
+}
+
+.product__info p {
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button button {
+    background: var(--primary);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+.button button:hover {
+    background: var(--grey);
+}
+
+@media (min-width: 768px) {
+    .product {
+        flex-direction: row;
+    }
+
+    .product div{
+        flex: 1;
+    }
+}

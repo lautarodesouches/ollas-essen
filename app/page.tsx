@@ -3,7 +3,7 @@ import styles from './page.module.css'
 import { ROUTES } from '@/routes'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFire, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
-import { getLines, getRandomProducts } from '@/utils'
+import { generateSlug, getLines, getRandomProducts } from '@/utils'
 
 export default async function Home() {
     const lines = await getLines()
@@ -48,7 +48,7 @@ export default async function Home() {
                 <ul className={styles.products__list}>
                     {randomProducts.map(item => (
                         <Link
-                            href={`${ROUTES.PRODUCTOS}${item.codigo}/`}
+                            href={`${ROUTES.PRODUCTOS}${generateSlug(item)}/`}
                             key={item.codigo}
                         >
                             <li className={styles.products__item}>
@@ -57,7 +57,10 @@ export default async function Home() {
                                     alt={item.nombre || ''}
                                 />
                                 <h4>
-                                    {item.nombre} - {item.linea}
+                                    {item.nombre}
+                                    {' '}
+                                    {item.medida && `${item.medida}cm`} -{' '}
+                                    {item.linea}
                                 </h4>
                                 <button>Ver</button>
                             </li>
