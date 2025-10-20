@@ -1,0 +1,23 @@
+.container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--light);
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .container div:nth-child(1) {
+        flex: 1;
+    }
+
+    .container div:nth-child(2) {
+        flex: 4;
+    }
+}

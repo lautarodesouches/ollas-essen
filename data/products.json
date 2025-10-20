@@ -222,15 +222,6 @@
         "imagenes": ["38351825.jpg"]
     },
     {
-        "linea": "cerámica terra",
-        "nombre": "flip 2.2",
-        "medida": "22x22",
-        "capacidad": 2,
-        "comensales": 2,
-        "codigo": 38123018,
-        "imagenes": ["38123018.png"]
-    },
-    {
         "linea": "nuit",
         "nombre": "plancha",
         "comensales": 6,
