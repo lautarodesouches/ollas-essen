@@ -13,11 +13,12 @@
         align-items: flex-start;
     }
 
-    .container div:nth-child(1) {
+    .container > div:nth-child(1) {
         flex: 1;
     }
 
-    .container div:nth-child(2) {
-        flex: 4;
+    .container > div:nth-child(2) {
+        flex: 5;
+        padding: 0 40px;
     }
 }

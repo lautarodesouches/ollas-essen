@@ -59,7 +59,7 @@
 
     .card img {
         width: auto;
-        max-width: 100%;
+        max-width: 90%;
         max-height: 50%;
         margin: auto;
         object-fit: cover;
