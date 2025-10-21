@@ -19,6 +19,7 @@ export default function Card({ product }: Props) {
                 <img
                     src={`/images/products/${product.imagenes[0]}`}
                     alt={product.nombre || ''}
+                    loading="lazy"
                 />
                 <h4>
                     {product.nombre} {product.medida && `${product.medida}cm`} -{' '}
