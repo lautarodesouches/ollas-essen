@@ -14,7 +14,7 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.title}>
                 <Link href={ROUTES.INICIO}>
-                    <h1>Ollas</h1>
+                    <h1>Recetas con Essen</h1>
                 </Link>
             </div>
             <FontAwesomeIcon

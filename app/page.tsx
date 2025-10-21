@@ -4,7 +4,7 @@ import { ROUTES } from '@/routes'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFire, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
 import { getLines, getRandomProducts } from '@/utils'
-import { Card, List } from '@/components'
+import { List } from '@/components'
 
 export default async function Home() {
     const lines = await getLines()

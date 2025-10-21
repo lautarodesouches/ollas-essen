@@ -15,8 +15,6 @@ interface Props {
 export async function generateMetadata({ params }: Props) {
     const { slug } = await params
 
-    console.log(slug);
-    
     const product = await getProductBySlug(slug)
 
     if (!product) return
@@ -43,7 +41,7 @@ export default async function Product({ params }: Props) {
                     <span className={styles.nav__span}>/</span>
                     <Link
                         className={styles.nav__link}
-                        href={`${ROUTES.PRODUCTOS}/linea=${product.linea}`}
+                        href={`${ROUTES.PRODUCTOS}linea=${product.linea}`}
                     >
                         {product.linea}
                     </Link>
@@ -87,13 +85,17 @@ export default async function Product({ params }: Props) {
                         </div>
                         <div className={styles.button}>
                             <Link
-                                href={`${`https://wa.me/${WHATSAPP__NUMBER}/?text=Hola%20me%20interesa%20${
-                                    product.nombre
-                                }${
-                                    product.medida
-                                        ? `%20${product.medida}cm`
-                                        : ''
-                                }`}%20de%20la%20linea%20${product.linea}`}
+                                href={`https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
+                                    `¡Hola! 😊 Estoy interesado/a en el producto ${
+                                        product.nombre
+                                    }${
+                                        product.medida
+                                            ? ` ${product.medida}cm`
+                                            : ''
+                                    } de la línea ${
+                                        product.linea
+                                    }. ¿Podrías darme más información?`
+                                )}`}
                             >
                                 <button>
                                     Quiero comprar{' '}
