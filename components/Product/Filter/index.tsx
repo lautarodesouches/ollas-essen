@@ -1,5 +1,4 @@
 'use client'
-
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import styles from './page.module.css'
@@ -12,9 +11,11 @@ interface Props {
         medida?: string
         nombre?: string
     }
+    lines: string[]
+    servings: string[]
 }
 
-export default function Filters({ currentFilters }: Props) {
+export default function Filters({ currentFilters, lines, servings }: Props) {
     const router = useRouter()
     const searchParams = useSearchParams()
 
@@ -51,10 +52,12 @@ export default function Filters({ currentFilters }: Props) {
                         updateUrl('linea', e.target.value)
                     }}
                 >
-                    <option value="">Todas</option>
-                    <option value="terra">Terra</option>
-                    <option value="essen">Essen</option>
-                    <option value="cobre">Cobre</option>
+                    <option value="">Todos</option>
+                    {lines.map((item, index) => (
+                        <option value={item} key={index}>
+                            {item}
+                        </option>
+                    ))}
                 </select>
             </div>
 
@@ -69,9 +72,11 @@ export default function Filters({ currentFilters }: Props) {
                     }}
                 >
                     <option value="">Todos</option>
-                    <option value="2">2</option>
-                    <option value="4">4</option>
-                    <option value="6">6</option>
+                    {servings.map((item, index) => (
+                        <option value={item} key={index}>
+                            {item}
+                        </option>
+                    ))}
                 </select>
             </div>
 

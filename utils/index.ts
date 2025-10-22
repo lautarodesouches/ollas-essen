@@ -45,6 +45,22 @@ export async function getLines(): Promise<string[]> {
     return lines
 }
 
+export async function getServings(): Promise<string[]> {
+    const products = await getProducts()
+
+    const servings = Array.from(
+        new Set(
+            products
+                .map(p => p.comensales)
+                .filter((v): v is number => v != null) // quita undefined o null
+        )
+    )
+        .sort((a, b) => a - b) // orden numérico
+        .map(String) // convertir a string
+
+    return servings
+}
+
 export async function getRandomProducts(
     limit: number = 10
 ): Promise<Product[]> {

@@ -53,7 +53,7 @@ export default async function Product({ params }: Props) {
                     <span className={styles.nav__span}>/</span>
                     <Link
                         className={styles.nav__link}
-                        href={`${ROUTES.PRODUCTOS}linea=${product.linea}`}
+                        href={`${ROUTES.PRODUCTOS}?linea=${product.linea}`}
                     >
                         {product.linea}
                     </Link>
