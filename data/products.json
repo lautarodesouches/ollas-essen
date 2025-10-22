@@ -15,7 +15,13 @@
         "capacidad": 2,
         "comensales": 2,
         "codigo": 38123032,
-        "imagenes": ["38123032.png", "38123032-1.jpg", "38123032-2.jpg", "38123032-3.jpg"]
+        "imagenes": [
+            "38123032.png",
+            "38123032-1.jpg",
+            "38123032-3.jpg",
+            "38123032-4.jpg",
+            "38123032-5.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -24,7 +30,13 @@
         "capacidad": 4.5,
         "comensales": 4,
         "codigo": 38452430,
-        "imagenes": ["38452430.png"]
+        "imagenes": [
+            "38452430.png",
+            "38452430-1.jpg",
+            "38452430-2.jpg",
+            "38452430-3.jpg",
+            "38452430-4.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -33,7 +45,13 @@
         "capacidad": 2.8,
         "comensales": 3,
         "codigo": 38252430,
-        "imagenes": ["38252430.png"]
+        "imagenes": [
+            "38252430.png",
+            "38252430-1.jpg",
+            "38252430-2.jpg",
+            "38252430-3.jpg",
+            "38252430-4.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -42,7 +60,12 @@
         "capacidad": 6.1,
         "comensales": 5,
         "codigo": 38452830,
-        "imagenes": ["38452830.png"]
+        "imagenes": [
+            "38452830.png",
+            "38452830-1.jpg",
+            "38452830-2.jpg",
+            "38452830-3.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -51,7 +74,12 @@
         "capacidad": 3.6,
         "comensales": 5,
         "codigo": 38252830,
-        "imagenes": ["38252830.png"]
+        "imagenes": [
+            "38252830.png",
+            "38252830-1.jpg",
+            "38252830-2.jpg",
+            "38252830-3.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -60,7 +88,7 @@
         "capacidad": 3.3,
         "comensales": 4,
         "codigo": 38753330,
-        "imagenes": ["38753330.png"]
+        "imagenes": ["38753330.png", "38753330-1.jpg", "38753330-2.jpg"]
     },
     {
         "linea": "capri",
@@ -69,7 +97,13 @@
         "capacidad": 6.4,
         "comensales": 6,
         "codigo": 38752930,
-        "imagenes": ["38752930.png"]
+        "imagenes": [
+            "38752930.png",
+            "38752930-1.jpg",
+            "38752930-2.jpg",
+            "38752930-3.jpg",
+            "38752930-4.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -78,7 +112,13 @@
         "capacidad": 3.6,
         "comensales": 4,
         "codigo": 38753030,
-        "imagenes": ["38753030.png"]
+        "imagenes": [
+            "38753030.png",
+            "38753030-1.jpg",
+            "38753030-2.jpg",
+            "38753030-3.jpg",
+            "38753030-4.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -87,7 +127,12 @@
         "capacidad": 2.1,
         "comensales": 2,
         "codigo": 38351866,
-        "imagenes": ["38351866.png"]
+        "imagenes": [
+            "38351866.png",
+            "38351866-1.jpg",
+            "38351866-2.jpg",
+            "38351866-3.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -95,7 +140,7 @@
         "capacidad": 0.5,
         "comensales": 1,
         "codigo": 38222002,
-        "imagenes": ["38222002.png"]
+        "imagenes": ["38222002.png", "38222002-1.jpg", "38222002-2.jpg"]
     },
     {
         "linea": "terra",
@@ -104,7 +149,13 @@
         "capacidad": 4.5,
         "comensales": 4,
         "codigo": 38452466,
-        "imagenes": ["38452466.png"]
+        "imagenes": [
+            "38452466.png",
+            "38452466-1.jpg",
+            "38452466-2.jpg",
+            "38452466-3.jpg",
+            "38452466-4.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -113,7 +164,13 @@
         "capacidad": 2.8,
         "comensales": 3,
         "codigo": 38252466,
-        "imagenes": ["38252466.png"]
+        "imagenes": [
+            "38252466.png",
+            "38252466-1.jpg",
+            "38252466-2.jpg",
+            "38252466-3.jpg",
+            "38252466-4.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -122,7 +179,13 @@
         "capacidad": 6.1,
         "comensales": 5,
         "codigo": 38452866,
-        "imagenes": ["38452866.png"]
+        "imagenes": [
+            "38452866.png",
+            "38452866-1.jpg",
+            "38452866-2.jpg",
+            "38452866-3.jpg",
+            "38452866-4.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -131,7 +194,12 @@
         "capacidad": 3.6,
         "comensales": 5,
         "codigo": 38252866,
-        "imagenes": ["38252866.png"]
+        "imagenes": [
+            "38252866.png",
+            "38252866-1.jpg",
+            "38252866-2.jpg",
+            "38252866-3.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -148,7 +216,12 @@
         "capacidad": 6.4,
         "comensales": 6,
         "codigo": 38752966,
-        "imagenes": ["38752966.png"]
+        "imagenes": [
+            "38752966.png",
+            "38752966-1.jpg",
+            "38752966-2.jpg",
+            "38752966-3.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -157,7 +230,12 @@
         "capacidad": 3.3,
         "comensales": 4,
         "codigo": 38753366,
-        "imagenes": ["38753366.png"]
+        "imagenes": [
+            "38753366.png",
+            "38753366-1.jpg",
+            "38753366-2.jpg",
+            "38753366-3.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -166,7 +244,13 @@
         "capacidad": 3.6,
         "comensales": 4,
         "codigo": 38753066,
-        "imagenes": ["38753066.png"]
+        "imagenes": [
+            "38753066.png",
+            "38753066-1.jpg",
+            "38753066-2.jpg",
+            "38753066-3.jpg",
+            "38753066-4.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -175,7 +259,13 @@
         "capacidad": 2,
         "comensales": 2,
         "codigo": 38123018,
-        "imagenes": ["38123018.png"]
+        "imagenes": [
+            "38123018.png",
+            "38123018-1.jpg",
+            "38123018-2.jpg",
+            "38123018-3.jpg",
+            "38123018-4.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -183,7 +273,7 @@
         "capacidad": 3,
         "comensales": 3,
         "codigo": 38223002,
-        "imagenes": ["38223002.png"]
+        "imagenes": ["38223002.png", "38223002-1.jpg", "38223002-2.jpg"]
     },
     {
         "linea": "cerámica terra",
@@ -235,7 +325,13 @@
         "capacidad": 2.3,
         "comensales": 2,
         "codigo": 38142461,
-        "imagenes": ["38142461.jpg"]
+        "imagenes": [
+            "38142461.jpg",
+            "38142461-1.jpg",
+            "38142461-2.jpg",
+            "38142461-3.jpg",
+            "38142461-4.jpg"
+        ]
     },
     {
         "linea": "nuit",

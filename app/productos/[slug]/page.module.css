@@ -30,17 +30,19 @@
 }
 
 .product__subtitle {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 300;
     color: var(--dark);
     text-transform: capitalize;
 }
+
 .product__title {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 400;
     color: var(--black);
     text-transform: capitalize;
 }
+
 .producto__code {
     font-size: 0.9rem;
     font-weight: 300;
@@ -92,7 +94,7 @@
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .methods__title {
@@ -116,6 +118,8 @@
 }
 
 .method__link {
+    width: fit-content;
+    margin: auto;
     color: var(--black);
     text-decoration: underline;
 }
@@ -127,5 +131,10 @@
 
     .product div {
         flex: 1;
+    }
+
+    .product__info p {
+        font-size: 1.2rem;
+        color: var(--dark);
     }
 }
