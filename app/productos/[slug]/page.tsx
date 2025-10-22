@@ -7,6 +7,7 @@ import { Faqs, Gallery } from '@/components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { WHATSAPP__NUMBER } from '@/constants'
+import Recommendded from '@/components/Product/Recommended'
 
 interface Props {
     params: Promise<{ slug: string }>
@@ -106,6 +107,7 @@ export default async function Product({ params }: Props) {
                     </div>
                 </article>
             </div>
+            <Recommendded codigo={product.codigo} />
             <Faqs />
         </>
     )
