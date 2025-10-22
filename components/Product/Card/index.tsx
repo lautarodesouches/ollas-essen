@@ -3,6 +3,7 @@ import { generateSlug } from '@/utils'
 import Link from 'next/link'
 import styles from './page.module.css'
 import { Product } from '@/interfaces'
+import Image from 'next/image'
 
 interface Props {
     product: Product
@@ -16,10 +17,11 @@ export default function Card({ product }: Props) {
             className={styles.card}
         >
             <li>
-                <img
+                <Image
                     src={`/images/products/${product.imagenes[0]}`}
                     alt={product.nombre || ''}
-                    loading="lazy"
+                    width={300}
+                    height={300}
                 />
                 <h4>
                     {product.nombre} {product.medida && `${product.medida}cm`} -{' '}
