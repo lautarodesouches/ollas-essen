@@ -67,7 +67,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .button button {
@@ -87,12 +87,45 @@
     background: var(--grey);
 }
 
+.methods {
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.methods__title {
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.methods__list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.methods__icon {
+    width: 30px;
+    height: 30px;
+    color: var(--primary);
+}
+
+.method__link {
+    color: var(--black);
+    text-decoration: underline;
+}
+
 @media (min-width: 768px) {
     .product {
         flex-direction: row;
     }
 
-    .product div{
+    .product div {
         flex: 1;
     }
 }

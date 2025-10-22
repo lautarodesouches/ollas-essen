@@ -5,9 +5,14 @@ import Link from 'next/link'
 import { ROUTES } from '@/routes'
 import { Faqs, Gallery } from '@/components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping, faCreditCard } from '@fortawesome/free-solid-svg-icons'
 import { WHATSAPP__NUMBER } from '@/constants'
 import Recommendded from '@/components/Product/Recommended'
+import {
+    faCcAmex,
+    faCcMastercard,
+    faCcVisa,
+} from '@fortawesome/free-brands-svg-icons'
 
 interface Props {
     params: Promise<{ slug: string }>
@@ -31,6 +36,12 @@ export default async function Product({ params }: Props) {
     const product = await getProductBySlug(slug)
 
     if (!product) return notFound()
+
+    const HREF = `https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
+        `¡Hola! 😊 Estoy interesado/a en el producto ${product.nombre}${
+            product.medida ? ` ${product.medida}cm` : ''
+        } de la línea ${product.linea}. ¿Podrías darme más información?`
+    )}`
 
     return (
         <>
@@ -85,23 +96,49 @@ export default async function Product({ params }: Props) {
                             )}
                         </div>
                         <div className={styles.button}>
-                            <Link
-                                href={`https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
-                                    `¡Hola! 😊 Estoy interesado/a en el producto ${
-                                        product.nombre
-                                    }${
-                                        product.medida
-                                            ? ` ${product.medida}cm`
-                                            : ''
-                                    } de la línea ${
-                                        product.linea
-                                    }. ¿Podrías darme más información?`
-                                )}`}
-                            >
+                            <Link href={HREF} target="_blank">
                                 <button>
                                     Quiero comprar{' '}
                                     <FontAwesomeIcon icon={faCartShopping} />
                                 </button>
+                            </Link>
+                        </div>
+                        <div className={styles.methods}>
+                            <h3 className={styles.methods__title}>
+                                Medios de pago disponibles
+                            </h3>
+                            <ul className={styles.methods__list}>
+                                <li className={styles.methods__li}>
+                                    <FontAwesomeIcon
+                                        icon={faCcVisa}
+                                        className={styles.methods__icon}
+                                    />
+                                </li>
+                                <li className={styles.methods__li}>
+                                    <FontAwesomeIcon
+                                        icon={faCcMastercard}
+                                        className={styles.methods__icon}
+                                    />
+                                </li>
+                                <li className={styles.methods__li}>
+                                    <FontAwesomeIcon
+                                        icon={faCcAmex}
+                                        className={styles.methods__icon}
+                                    />
+                                </li>
+                                <li className={styles.methods__li}>
+                                    <FontAwesomeIcon
+                                        icon={faCreditCard}
+                                        className={styles.methods__icon}
+                                    />
+                                </li>
+                            </ul>
+                            <Link
+                                href={HREF}
+                                target="_blank"
+                                className={styles.method__link}
+                            >
+                                Consultar todas las promos vigentes
                             </Link>
                         </div>
                     </div>
