@@ -3,8 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "npm run open && next dev --turbopack --port 3007",
-        "open": "start http://localhost:3007",
+        "dev": "next dev --turbopack --port 3007",
         "build": "next build --turbopack",
         "start": "next start --port 3007"
     },
