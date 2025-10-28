@@ -38,7 +38,7 @@ export default async function Product({ params }: Props) {
     if (!product) return notFound()
 
     const HREF = `https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
-        `¡Hola! 😊 Estoy interesado/a en el producto ${product.nombre}${
+        `¡Hola! Estoy interesado/a en el producto ${product.nombre}${
             product.medida ? ` ${product.medida}cm` : ''
         } de la línea ${product.linea}. ¿Podrías darme más información?`
     )}`

@@ -2,13 +2,19 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
     z-index: 1000;
     cursor: pointer;
     background-color: #25d366;
     border-radius: 50%;
     padding: 10px;
+    transition: all 0.3s ease-in-out
+}
+
+.whatsapp:hover{
+    background: #16b651;
+    transform: scale(1.05);
 }
 
 .whatsapp svg {

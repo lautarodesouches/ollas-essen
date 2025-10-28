@@ -3,13 +3,10 @@ import Card from '../Card'
 import { Product } from '@/interfaces'
 
 export default function ProductList({ products }: { products: Product[] }) {
-    if (!products.length) return <p>No se encontraron productos.</p>
-
     return (
         <div className={styles.grid}>
-            {products.map(p => (
-                <Card product={p} key={p.codigo} />
-            ))}
+            {!products.length && <p>No se encontraron productos, prueba con otros filtros.</p>}
+            {products && products.map(p => <Card product={p} key={p.codigo} />)}
         </div>
     )
 }

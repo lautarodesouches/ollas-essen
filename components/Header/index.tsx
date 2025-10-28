@@ -32,7 +32,8 @@ export default function Header() {
                     {[
                         { name: 'Inicio', link: ROUTES.INICIO },
                         { name: 'Productos', link: ROUTES.PRODUCTOS },
-                        { name: 'Emprender', link: ROUTES.EMPRENDER },
+                        { name: 'Recetas', link: ROUTES.RECETAS },
+                        { name: 'Sumate', link: ROUTES.SUMATE },
                     ].map((item, index) => (
                         <li key={index} className={styles.nav__item}>
                             <Link

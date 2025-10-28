@@ -1,13 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './styles.module.css'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import { WHATSAPP__NUMBER } from '@/constants'
+import { ROUTES } from '@/routes'
 
 export default function Whatsapp() {
     return (
         <aside className={styles.whatsapp}>
             <a
-                href={`https://wa.me/${WHATSAPP__NUMBER}`}
+                href={ROUTES.WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
             >

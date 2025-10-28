@@ -51,6 +51,7 @@
 }
 
 .start__button {
+    cursor: pointer;
     border: none;
     border-radius: 15px;
     padding: 15px 40px;
@@ -58,19 +59,25 @@
     font-weight: 700;
 }
 
-.start__button:nth-child(1) {
+.start__div a:nth-of-type(1) button {
     background: var(--primary);
     color: var(--white);
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-in-out;
 }
 
-.start__button:nth-child(2) {
+.start__div a:nth-of-type(2) button {
     background: none;
     color: var(--primary);
     border: 1px solid var(--primary);
+    transition: all 0.3s ease-in-out;
 }
 
 .start__button:hover {
-    background: var(--accent);
+    background: var(--accent) !important;
+    color: var(--white) !important;
+    border: 1px solid !important;
+    border: 1px solid var(--accent) !important;
 }
 
 .categories {
@@ -85,12 +92,12 @@
 
 .categories__title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--light);
 }
 
 .categories__list {
-    margin-top: 2rem;
+    margin-top: 4rem;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -102,7 +109,7 @@
     border: none;
     border-radius: 15px;
     padding: 5px 20px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 700;
     background: none;
     color: var(--light);
@@ -128,7 +135,7 @@
 
 .products__title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--dark);
 }
 
@@ -149,7 +156,7 @@
 
 .why__title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--dark);
 }
 

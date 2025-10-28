@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
 import { Header, Footer, Whatsapp } from '@/components'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 const poppins = Poppins({
     weight: ['300', '400', '700'],
@@ -31,6 +31,7 @@ export default function RootLayout({
                 <Whatsapp />
             </body>
             <GoogleAnalytics gaId="GTM-N444Q5QS" />
+            <GoogleTagManager gtmId='AW-17676876577' />
         </html>
     )
 }

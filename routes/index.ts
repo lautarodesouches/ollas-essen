@@ -2,7 +2,7 @@ export const ROUTES = {
     INICIO: '/',
     PRODUCTOS: '/productos/',
     RECETAS: '/recetas/',
-    EMPRENDER: '/emprender/',
+    SUMATE: '/sumate/',
     INSTAGRAM: '/link/instagram/',
     WHATSAPP: '/link/whatsapp/',
     TERMS: '/terminos-y-condiciones/',

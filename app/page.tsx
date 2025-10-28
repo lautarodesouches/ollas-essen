@@ -22,12 +22,16 @@ export default async function Home() {
                     culinaria
                 </h3>
                 <div className={styles.start__div}>
-                    <button className={styles.start__button}>
-                        <Link href={ROUTES.PRODUCTOS}>Ver Productos</Link>
-                    </button>
-                    <button className={styles.start__button}>
-                        <Link href={ROUTES.RECETAS}>Ver Recetas</Link>
-                    </button>
+                    <Link href={ROUTES.PRODUCTOS}>
+                        <button className={styles.start__button}>
+                            Ver Productos
+                        </button>
+                    </Link>
+                    <Link href={ROUTES.RECETAS}>
+                        <button className={styles.start__button}>
+                            Ver Recetas
+                        </button>
+                    </Link>
                 </div>
             </section>
             <section className={styles.categories}>
