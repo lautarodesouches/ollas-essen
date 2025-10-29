@@ -3,9 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev --turbopack --port 3007",
+        "dev": "next dev --turbopack --port 3008",
         "build": "next build --turbopack",
-        "start": "next start --port 3007"
+        "start": "next start --port 3008"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^7.0.1",

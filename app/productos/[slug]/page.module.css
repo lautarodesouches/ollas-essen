@@ -65,14 +65,16 @@
     color: var(--dark);
 }
 
-.button {
+.buttons {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 40px;
+    gap: 20px;
 }
 
-.button button {
+.buttons__primary {
     background: var(--primary);
     color: var(--white);
     padding: 10px 20px;
@@ -85,8 +87,26 @@
     transition: background 0.5s ease;
 }
 
-.button button:hover {
+.buttons__primary:hover {
     background: var(--grey);
+}
+
+.buttons__secondary {
+    background: var(--white);
+    color: var(--primary);
+    padding: 10px 20px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+.buttons__secondary:hover {
+    background: var(--primary);
+    color: var(--white);
 }
 
 .methods {

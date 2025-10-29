@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ROUTES } from '@/routes'
 import { Faqs, Gallery } from '@/components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping, faCreditCard } from '@fortawesome/free-solid-svg-icons'
+import { faCreditCard } from '@fortawesome/free-solid-svg-icons'
 import { WHATSAPP__NUMBER } from '@/constants'
 import Recommendded from '@/components/Product/Recommended'
 import {
@@ -36,12 +36,6 @@ export default async function Product({ params }: Props) {
     const product = await getProductBySlug(slug)
 
     if (!product) return notFound()
-
-    const HREF = `https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
-        `¡Hola! Estoy interesado/a en el producto ${product.nombre}${
-            product.medida ? ` ${product.medida}cm` : ''
-        } de la línea ${product.linea}. ¿Podrías darme más información?`
-    )}`
 
     return (
         <>
@@ -95,11 +89,41 @@ export default async function Product({ params }: Props) {
                                 </div>
                             )}
                         </div>
-                        <div className={styles.button}>
-                            <Link href={HREF} target="_blank">
-                                <button>
-                                    Quiero comprar{' '}
-                                    <FontAwesomeIcon icon={faCartShopping} />
+                        <div className={styles.buttons}>
+                            <Link
+                                href={`https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
+                                    `¡Hola! Estoy interesado/a en el producto ${
+                                        product.nombre
+                                    }${
+                                        product.medida
+                                            ? ` ${product.medida}cm`
+                                            : ''
+                                    } de la línea ${
+                                        product.linea
+                                    }. ¿Podrías darme más información?`
+                                )}`}
+                                target="_blank"
+                            >
+                                <button className={styles.buttons__primary}>
+                                    Quiero mas información
+                                </button>
+                            </Link>
+                            <Link
+                                href={`https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
+                                    `¡Hola! Quería consultar el precio de ${
+                                        product.nombre
+                                    }${
+                                        product.medida
+                                            ? ` ${product.medida}cm`
+                                            : ''
+                                    } de la línea ${
+                                        product.linea
+                                    }`
+                                )}`}
+                                target="_blank"
+                            >
+                                <button className={styles.buttons__secondary}>
+                                    Consultar precio
                                 </button>
                             </Link>
                         </div>
@@ -134,11 +158,19 @@ export default async function Product({ params }: Props) {
                                 </li>
                             </ul>
                             <Link
-                                href={HREF}
+                                href={`https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
+                                    `¡Hola! Estoy interesado/a en las promociones de ${
+                                        product.nombre
+                                    }${
+                                        product.medida
+                                            ? ` ${product.medida}cm`
+                                            : ''
+                                    } de la línea ${product.linea}`
+                                )}`}
                                 target="_blank"
                                 className={styles.method__link}
                             >
-                                Consultar todas las promos vigentes
+                                Consultar todas las promos de este mes
                             </Link>
                         </div>
                     </div>
