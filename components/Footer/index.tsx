@@ -13,6 +13,9 @@ export default function Footer() {
             <p>
                 <Link href={ROUTES.TERMS}>Terminos y condiciones</Link>
             </p>
+            <p>
+                <Link href={ROUTES.CONTACT}>Contacto</Link>
+            </p>
         </footer>
     )
 }

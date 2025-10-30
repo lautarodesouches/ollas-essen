@@ -6,5 +6,6 @@ export const ROUTES = {
     INSTAGRAM: '/link/instagram/',
     WHATSAPP: '/link/whatsapp/',
     TERMS: '/terminos-y-condiciones/',
-    PRIVACY: '/politica-de-privacidad/'
+    PRIVACY: '/politica-de-privacidad/',
+    CONTACT: '/contacto/',
 }
