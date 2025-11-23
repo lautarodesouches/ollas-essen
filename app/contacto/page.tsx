@@ -2,6 +2,8 @@
 import { WHATSAPP__NUMBER } from '@/constants'
 import styles from './page.module.css'
 
+import TrackedLink from '@/components/TrackedLink'
+
 export default function ContactPage() {
     const whatsappMessage = encodeURIComponent(
         '¡Hola! Estoy interesado/a en los productos Essen 😊'
@@ -31,14 +33,14 @@ export default function ContactPage() {
                     a responder personalmente!
                 </p>
 
-                <a
+                <TrackedLink
                     href={whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.whatsappButton}
                 >
                     💬 Contactar por WhatsApp
-                </a>
+                </TrackedLink>
             </section>
         </main>
     )

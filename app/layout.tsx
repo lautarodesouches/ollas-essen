@@ -30,8 +30,8 @@ export default function RootLayout({
                 <Footer />
                 <Whatsapp />
             </body>
-            <GoogleAnalytics gaId="GTM-N444Q5QS" />
-            <GoogleTagManager gtmId='AW-17676876577' />
+            <GoogleTagManager gtmId="GTM-N444Q5QS" />
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ADS_ID!} />
         </html>
     )
 }

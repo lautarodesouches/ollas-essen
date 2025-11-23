@@ -7,6 +7,8 @@ import { ROUTES } from '@/routes'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 
+import TrackedLink from '../TrackedLink'
+
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
 
@@ -53,12 +55,12 @@ export default function Header() {
                             className={styles.icon}
                         />
                     </Link>
-                    <Link href={ROUTES.WHATSAPP}>
+                    <TrackedLink href={ROUTES.WHATSAPP}>
                         <FontAwesomeIcon
                             icon={faWhatsapp}
                             className={styles.icon}
                         />
-                    </Link>
+                    </TrackedLink>
                 </div>
             </div>
         </header>

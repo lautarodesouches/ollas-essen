@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from './page.module.css'
 import { ROUTES } from '@/routes'
+import TrackedLink from '@/components/TrackedLink'
 
 export default function Emprender() {
     return (
@@ -29,11 +30,11 @@ export default function Emprender() {
                             <span>Trabajá desde donde quieras</span>
                         </div>
                     </div>
-                    <Link href={ROUTES.WHATSAPP}>
+                    <TrackedLink href={ROUTES.WHATSAPP}>
                         <button className={styles.hero__cta}>
                             Quiero comenzar ahora
                         </button>
-                    </Link>
+                    </TrackedLink>
                     <p className={styles.hero__note}>
                         Charla informativa sin compromiso
                     </p>
@@ -320,11 +321,11 @@ export default function Emprender() {
                         Sin compromiso, sin presión. Solo una conversación que
                         puede cambiar todo.
                     </p>
-                    <Link href={ROUTES.WHATSAPP}>
+                    <TrackedLink href={ROUTES.WHATSAPP}>
                         <button className={styles.finalCta__button}>
                             Quiero mi charla informativa
                         </button>
-                    </Link>
+                    </TrackedLink>
                     <div className={styles.finalCta__benefits}>
                         <span>15 minutos de tu tiempo</span>
                         <span>•</span>

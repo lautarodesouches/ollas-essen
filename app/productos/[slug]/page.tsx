@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCreditCard } from '@fortawesome/free-solid-svg-icons'
 import { WHATSAPP__NUMBER } from '@/constants'
 import Recommendded from '@/components/Product/Recommended'
+import TrackedLink from '@/components/TrackedLink'
 import {
     faCcAmex,
     faCcMastercard,
@@ -90,7 +91,7 @@ export default async function Product({ params }: Props) {
                             )}
                         </div>
                         <div className={styles.buttons}>
-                            <Link
+                            <TrackedLink
                                 href={`https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
                                     `¡Hola! Estoy interesado/a en el producto ${
                                         product.nombre
@@ -107,8 +108,8 @@ export default async function Product({ params }: Props) {
                                 <button className={styles.buttons__primary}>
                                     Quiero mas información
                                 </button>
-                            </Link>
-                            <Link
+                            </TrackedLink>
+                            <TrackedLink
                                 href={`https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
                                     `¡Hola! Quería consultar el precio de ${
                                         product.nombre
@@ -125,7 +126,7 @@ export default async function Product({ params }: Props) {
                                 <button className={styles.buttons__secondary}>
                                     Consultar precio
                                 </button>
-                            </Link>
+                            </TrackedLink>
                         </div>
                         <div className={styles.methods}>
                             <h3 className={styles.methods__title}>
@@ -157,7 +158,7 @@ export default async function Product({ params }: Props) {
                                     />
                                 </li>
                             </ul>
-                            <Link
+                            <TrackedLink
                                 href={`https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
                                     `¡Hola! Estoy interesado/a en las promociones de ${
                                         product.nombre
@@ -171,7 +172,7 @@ export default async function Product({ params }: Props) {
                                 className={styles.method__link}
                             >
                                 Consultar todas las promos de este mes
-                            </Link>
+                            </TrackedLink>
                         </div>
                     </div>
                 </article>
