@@ -5,7 +5,8 @@
         "medida": "18",
         "capacidad": 2.1,
         "comensales": 2,
-        "codigo": 38351830
+        "codigo": 38351830,
+        "imagenes": ["38351830.png", "38351830-1.jpg", "38351830-2.jpg"]
     },
     {
         "linea": "capri",
@@ -13,7 +14,14 @@
         "medida": "22x22",
         "capacidad": 2,
         "comensales": 2,
-        "codigo": 38123032
+        "codigo": 38123032,
+        "imagenes": [
+            "38123032.png",
+            "38123032-1.jpg",
+            "38123032-3.jpg",
+            "38123032-4.jpg",
+            "38123032-5.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -21,7 +29,14 @@
         "medida": "24",
         "capacidad": 4.5,
         "comensales": 4,
-        "codigo": 38452430
+        "codigo": 38452430,
+        "imagenes": [
+            "38452430.png",
+            "38452430-1.jpg",
+            "38452430-2.jpg",
+            "38452430-3.jpg",
+            "38452430-4.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -29,7 +44,14 @@
         "medida": "24",
         "capacidad": 2.8,
         "comensales": 3,
-        "codigo": 38252430
+        "codigo": 38252430,
+        "imagenes": [
+            "38252430.png",
+            "38252430-1.jpg",
+            "38252430-2.jpg",
+            "38252430-3.jpg",
+            "38252430-4.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -37,7 +59,13 @@
         "medida": "28",
         "capacidad": 6.1,
         "comensales": 5,
-        "codigo": 38452830
+        "codigo": 38452830,
+        "imagenes": [
+            "38452830.png",
+            "38452830-1.jpg",
+            "38452830-2.jpg",
+            "38452830-3.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -45,7 +73,13 @@
         "medida": "28",
         "capacidad": 3.6,
         "comensales": 5,
-        "codigo": 38252830
+        "codigo": 38252830,
+        "imagenes": [
+            "38252830.png",
+            "38252830-1.jpg",
+            "38252830-2.jpg",
+            "38252830-3.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -53,7 +87,8 @@
         "medida": "33x23",
         "capacidad": 3.3,
         "comensales": 4,
-        "codigo": 38753330
+        "codigo": 38753330,
+        "imagenes": ["38753330.png", "38753330-1.jpg", "38753330-2.jpg"]
     },
     {
         "linea": "capri",
@@ -61,7 +96,14 @@
         "medida": "29",
         "capacidad": 6.4,
         "comensales": 6,
-        "codigo": 38752930
+        "codigo": 38752930,
+        "imagenes": [
+            "38752930.png",
+            "38752930-1.jpg",
+            "38752930-2.jpg",
+            "38752930-3.jpg",
+            "38752930-4.jpg"
+        ]
     },
     {
         "linea": "capri",
@@ -69,7 +111,14 @@
         "medida": "30",
         "capacidad": 3.6,
         "comensales": 4,
-        "codigo": 38753030
+        "codigo": 38753030,
+        "imagenes": [
+            "38753030.png",
+            "38753030-1.jpg",
+            "38753030-2.jpg",
+            "38753030-3.jpg",
+            "38753030-4.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -77,14 +126,21 @@
         "medida": "18",
         "capacidad": 2.1,
         "comensales": 2,
-        "codigo": 38351866
+        "codigo": 38351866,
+        "imagenes": [
+            "38351866.png",
+            "38351866-1.jpg",
+            "38351866-2.jpg",
+            "38351866-3.jpg"
+        ]
     },
     {
         "linea": "terra",
         "nombre": "sartén express",
         "capacidad": 0.5,
         "comensales": 1,
-        "codigo": 38222002
+        "codigo": 38222002,
+        "imagenes": ["38222002.png", "38222002-1.jpg", "38222002-2.jpg"]
     },
     {
         "linea": "terra",
@@ -92,7 +148,14 @@
         "medida": "24",
         "capacidad": 4.5,
         "comensales": 4,
-        "codigo": 38452466
+        "codigo": 38452466,
+        "imagenes": [
+            "38452466.png",
+            "38452466-1.jpg",
+            "38452466-2.jpg",
+            "38452466-3.jpg",
+            "38452466-4.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -100,7 +163,14 @@
         "medida": "24",
         "capacidad": 2.8,
         "comensales": 3,
-        "codigo": 38252466
+        "codigo": 38252466,
+        "imagenes": [
+            "38252466.png",
+            "38252466-1.jpg",
+            "38252466-2.jpg",
+            "38252466-3.jpg",
+            "38252466-4.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -108,7 +178,14 @@
         "medida": "28",
         "capacidad": 6.1,
         "comensales": 5,
-        "codigo": 38452866
+        "codigo": 38452866,
+        "imagenes": [
+            "38452866.png",
+            "38452866-1.jpg",
+            "38452866-2.jpg",
+            "38452866-3.jpg",
+            "38452866-4.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -116,14 +193,21 @@
         "medida": "28",
         "capacidad": 3.6,
         "comensales": 5,
-        "codigo": 38252866
+        "codigo": 38252866,
+        "imagenes": [
+            "38252866.png",
+            "38252866-1.jpg",
+            "38252866-2.jpg",
+            "38252866-3.jpg"
+        ]
     },
     {
         "linea": "terra",
         "nombre": "jarro quick",
         "capacidad": 1.7,
         "comensales": 2,
-        "codigo": 38121702
+        "codigo": 38121702,
+        "imagenes": ["38121702.png"]
     },
     {
         "linea": "terra",
@@ -131,7 +215,13 @@
         "medida": "29",
         "capacidad": 6.4,
         "comensales": 6,
-        "codigo": 38752966
+        "codigo": 38752966,
+        "imagenes": [
+            "38752966.png",
+            "38752966-1.jpg",
+            "38752966-2.jpg",
+            "38752966-3.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -139,7 +229,13 @@
         "medida": "33x23",
         "capacidad": 3.3,
         "comensales": 4,
-        "codigo": 38753366
+        "codigo": 38753366,
+        "imagenes": [
+            "38753366.png",
+            "38753366-1.jpg",
+            "38753366-2.jpg",
+            "38753366-3.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -147,7 +243,14 @@
         "medida": "30",
         "capacidad": 3.6,
         "comensales": 4,
-        "codigo": 38753066
+        "codigo": 38753066,
+        "imagenes": [
+            "38753066.png",
+            "38753066-1.jpg",
+            "38753066-2.jpg",
+            "38753066-3.jpg",
+            "38753066-4.jpg"
+        ]
     },
     {
         "linea": "terra",
@@ -155,14 +258,22 @@
         "medida": "22x22",
         "capacidad": 2,
         "comensales": 2,
-        "codigo": 38123018
+        "codigo": 38123018,
+        "imagenes": [
+            "38123018.png",
+            "38123018-1.jpg",
+            "38123018-2.jpg",
+            "38123018-3.jpg",
+            "38123018-4.jpg"
+        ]
     },
     {
         "linea": "terra",
         "nombre": "wok",
         "capacidad": 3,
         "comensales": 3,
-        "codigo": 38223002
+        "codigo": 38223002,
+        "imagenes": ["38223002.png", "38223002-1.jpg", "38223002-2.jpg"]
     },
     {
         "linea": "cerámica terra",
@@ -170,7 +281,8 @@
         "medida": "24",
         "capacidad": 2.8,
         "comensales": 3,
-        "codigo": 38252425
+        "codigo": 38252425,
+        "imagenes": ["38252425.jpg"]
     },
     {
         "linea": "cerámica terra",
@@ -178,7 +290,8 @@
         "medida": "24",
         "capacidad": 4.5,
         "comensales": 4,
-        "codigo": 38452425
+        "codigo": 38452425,
+        "imagenes": ["38452425.jpg"]
     },
     {
         "linea": "cerámica terra",
@@ -186,7 +299,8 @@
         "medida": "29",
         "capacidad": 6.4,
         "comensales": 6,
-        "codigo": 38752925
+        "codigo": 38752925,
+        "imagenes": ["38752925.png"]
     },
     {
         "linea": "cerámica terra",
@@ -194,21 +308,15 @@
         "medida": "18",
         "capacidad": 2.1,
         "comensales": 2,
-        "codigo": 38351825
-    },
-    {
-        "linea": "cerámica terra",
-        "nombre": "flip 2.2",
-        "medida": "22x22",
-        "capacidad": 2,
-        "comensales": 2,
-        "codigo": 38123018
+        "codigo": 38351825,
+        "imagenes": ["38351825.jpg"]
     },
     {
         "linea": "nuit",
         "nombre": "plancha",
         "comensales": 6,
-        "codigo": 38734472
+        "codigo": 38734472,
+        "imagenes": ["38734472.png"]
     },
     {
         "linea": "nuit",
@@ -216,37 +324,49 @@
         "medida": "24",
         "capacidad": 2.3,
         "comensales": 2,
-        "codigo": 38142461
+        "codigo": 38142461,
+        "imagenes": [
+            "38142461.jpg",
+            "38142461-1.jpg",
+            "38142461-2.jpg",
+            "38142461-3.jpg",
+            "38142461-4.jpg"
+        ]
     },
     {
         "linea": "nuit",
         "nombre": "set 24cm Cacerola 4,6 L | Bifera 2,3 L | Sartén 2 L",
         "comensales": 5,
-        "codigo": 38941793
+        "codigo": 38941793,
+        "imagenes": ["38941793.png"]
     },
     {
         "linea": "nuit",
         "nombre": "set 28cm Cacerola 6,1 L | Bifera 3,1 L | Sartén 2,7 L",
         "comensales": 6,
-        "codigo": 38941593
+        "codigo": 38941593,
+        "imagenes": ["38941593.png"]
     },
     {
         "linea": "a inducción",
         "nombre": "bifera",
         "medida": "24",
-        "codigo": 38647593
+        "codigo": 38647593,
+        "imagenes": ["38647593.png"]
     },
     {
         "linea": "a inducción",
         "nombre": "cacerola con tapa sartén",
         "medida": "24",
-        "codigo": 38941993
+        "codigo": 38941993,
+        "imagenes": ["38941993.jpg"]
     },
     {
         "linea": "a inducción",
         "nombre": "set",
         "medida": "24",
-        "codigo": 1
+        "codigo": 1,
+        "imagenes": ["1.png"]
     },
     {
         "linea": "fusión",
@@ -254,183 +374,215 @@
         "medida": "24",
         "capacidad": 4.9,
         "comensales": 4,
-        "codigo": 38002410
+        "codigo": 38002410,
+        "imagenes": ["38002410.jpg"]
     },
     {
         "linea": "especiales",
         "nombre": "kamado",
         "comensales": 6,
-        "codigo": 38773248
+        "codigo": 38773248,
+        "imagenes": ["38773248.jpg"]
     },
     {
         "linea": "especiales",
         "nombre": "robot de cocina rein",
-        "codigo": 70050010
+        "codigo": 70050010,
+        "imagenes": ["70050010.png"]
     },
     {
         "linea": "especiales",
         "nombre": "set grill & nuit",
         "comensales": 6,
-        "codigo": 38954472
+        "codigo": 38954472,
+        "imagenes": ["38954472.jpg"]
     },
     {
         "linea": "especiales",
         "nombre": "urban grill",
         "medida": "49x27",
         "comensales": 6,
-        "codigo": 38734372
+        "codigo": 38734372,
+        "imagenes": ["38734372.jpg"]
     },
     {
         "linea": "complementos",
         "nombre": "savarín terra",
         "medida": "18",
         "capacidad": 1,
-        "codigo": 38801585
+        "codigo": 38801585,
+        "imagenes": ["38801585.png"]
     },
     {
         "linea": "complementos",
         "nombre": "savarín terra",
         "medida": "24",
         "capacidad": 2,
-        "codigo": 38801385
+        "codigo": 38801385,
+        "imagenes": ["38801385.png"]
     },
     {
         "linea": "complementos",
         "nombre": "savarín terra",
         "medida": "28",
         "capacidad": 3.5,
-        "codigo": 38801685
+        "codigo": 38801685,
+        "imagenes": ["38801685.png"]
     },
     {
         "linea": "complementos",
         "nombre": "vaporizador",
         "medida": "18/28",
-        "codigo": 38802384
+        "codigo": 38802384,
+        "imagenes": ["38802384.png"]
     },
     {
         "linea": "complementos",
         "nombre": "budineras terra x2",
         "medida": "28-30",
-        "codigo": 38802184
+        "codigo": 38802184,
+        "imagenes": ["38802184.png"]
     },
     {
         "linea": "bazar",
         "nombre": "mandolina de mano con sujetador",
-        "codigo": 60050209
+        "codigo": 60050209,
+        "imagenes": ["60050209.png"]
     },
     {
         "linea": "bazar",
         "nombre": "cuchillo chef",
         "medida": "33",
-        "codigo": 60050184
+        "codigo": 60050184,
+        "imagenes": ["60050184.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "cuchillo santoku",
         "medida": "31",
-        "codigo": 60050183
+        "codigo": 60050183,
+        "imagenes": ["60050183.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "cuchillo utility",
         "medida": "24",
-        "codigo": 60050182
+        "codigo": 60050182,
+        "imagenes": ["60050182.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "cuchillo carving",
         "medida": "33",
-        "codigo": 60050181
+        "codigo": 60050181,
+        "imagenes": ["60050181.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "afilador de cuchillos 4 pasos",
-        "codigo": 60050204
+        "codigo": 60050204,
+        "imagenes": ["60050204.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "tabla de bamboo cocina",
         "medida": "30x40",
-        "codigo": 60050203
+        "codigo": 60050203,
+        "imagenes": ["60050203.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "tabla de bamboo cocina",
         "medida": "30x30",
-        "codigo": 60050202
+        "codigo": 60050202,
+        "imagenes": ["60050202.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "rallador de mano grado fino",
         "medida": "34x60x2",
-        "codigo": 60050199
+        "codigo": 60050199,
+        "imagenes": ["60050199.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "rallador de mano grado medio",
         "medida": "34x60x2",
-        "codigo": 60050198
+        "codigo": 60050198,
+        "imagenes": ["60050198.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "rallador de mano grado grueso",
         "medida": "34x60x2",
-        "codigo": 60050200
+        "codigo": 60050200,
+        "imagenes": ["60050200.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "rallador de mano tipo cintas",
         "medida": "34x60x2",
-        "codigo": 60050205
+        "codigo": 60050205,
+        "imagenes": ["60050205.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "bombilla regulable de acero inoxidable con difusor",
-        "codigo": 60050207
+        "codigo": 60050207,
+        "imagenes": ["60050207.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "mate térmico",
-        "codigo": 60050197
+        "codigo": 60050197,
+        "imagenes": ["60050197.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "set mate neo",
-        "codigo": 60050133
+        "codigo": 60050133,
+        "imagenes": ["60050177.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "set mate nuit",
-        "codigo": 60050177
+        "codigo": 60050177,
+        "imagenes": ["60050177.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "asas de silicona linea acero inoxidable",
-        "codigo": 60050219
+        "codigo": 60050219,
+        "imagenes": ["60050219.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "bowls de acero con tapa set x 3 negro",
-        "codigo": 60050210
+        "codigo": 60050210,
+        "imagenes": ["60050210.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "abrelatas 5 en 1",
-        "codigo": 60050109
+        "codigo": 60050109,
+        "imagenes": ["60050109.png"]
     },
     {
         "linea": "bazar",
         "nombre": "aceite arbequina x3 unidades",
-        "codigo": 67700718
+        "codigo": 67700718,
+        "imagenes": ["67700718.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "vaso térmico 520ml",
-        "codigo": 60050206
+        "codigo": 60050206,
+        "imagenes": ["60050206.jpg"]
     },
     {
         "linea": "bazar",
         "nombre": "cafetera italiana essen",
-        "codigo": 60050208
+        "codigo": 60050208,
+        "imagenes": ["60050208.jpg"]
     }
 ]

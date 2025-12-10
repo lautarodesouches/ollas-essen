@@ -6,7 +6,9 @@
         "capacidad": 2.1,
         "comensales": 2,
         "codigo": 38351830,
-        "imagenes": ["38351830.png", "38351830-1.jpg", "38351830-2.jpg"]
+        "imagenes": ["38351830.png", "38351830-1.jpg", "38351830-2.jpg"],
+        "titulo_venta": "La Aliada Perfecta para Parejas",
+        "descripcion": "Ideal para disfrutar de porciones justas en pareja, ahorrando espacio y energía. Su 'Efecto Horno' permite cocinar deliciosas recetas sin prender el gas, facilitando tu día a día. Además, su diseño Capri aporta una estética moderna y vibrante a tu cocina."
     },
     {
         "linea": "capri",
@@ -21,7 +23,9 @@
             "38123032-3.jpg",
             "38123032-4.jpg",
             "38123032-5.jpg"
-        ]
+        ],
+        "titulo_venta": "Tu Cocina Compacta y Versátil",
+        "descripcion": "La solución más práctica para cocinar vuelta y vuelta, ideal para solteros o parejas que buscan rapidez. Gracias a su antiadherente de calidad, la limpieza es cuestión de segundos. Su diseño moderno embellece tu cocina mientras ahorras gas con cada uso."
     },
     {
         "linea": "capri",
@@ -36,7 +40,9 @@
             "38452430-2.jpg",
             "38452430-3.jpg",
             "38452430-4.jpg"
-        ]
+        ],
+        "titulo_venta": "La Reina de la Cocina Familiar",
+        "descripcion": "La pieza fundamental para una familia tipo, ofreciendo versatilidad para todo tipo de recetas diarias. Con su capacidad ideal, podrás alimentar a todos ahorrando gas gracias a su excelente distribución de calor. Su estética Capri renueva el aire de tu cocina con modernidad."
     },
     {
         "linea": "capri",
@@ -51,7 +57,9 @@
             "38252430-2.jpg",
             "38252430-3.jpg",
             "38252430-4.jpg"
-        ]
+        ],
+        "titulo_venta": "Versatilidad para el Menú Diario",
+        "descripcion": "Perfecta para resolver comidas rápidas y deliciosas para hasta 3 personas. Su superficie antiadherente asegura que nada se pegue y se limpie muy fácil, ideal para el ritmo cotidiano. Combina funcionalidad con el diseño moderno de la línea Capri."
     },
     {
         "linea": "capri",
@@ -65,7 +73,9 @@
             "38452830-1.jpg",
             "38452830-2.jpg",
             "38452830-3.jpg"
-        ]
+        ],
+        "titulo_venta": "Cocina Abundante para Familia Numerosa",
+        "descripcion": "Ideal para familias numerosas que necesitan capacidad y eficiencia en cada comida. Prepara guisos y estofados ahorrando gas con su función horno, manteniendo el sabor casero que todos aman. Su diseño robusto pero elegante destaca en cualquier cocina."
     },
     {
         "linea": "capri",
@@ -79,7 +89,9 @@
             "38252830-1.jpg",
             "38252830-2.jpg",
             "38252830-3.jpg"
-        ]
+        ],
+        "titulo_venta": "Grandes Comidas, Mínimo Esfuerzo",
+        "descripcion": "La sartén ideal para familias de buen comer, permitiendo cocinar grandes porciones sin descuidar la limpieza fácil. Su tecnología reemplaza al horno en cocciones más rápidas y económicas. Disfruta de la estética moderna Capri mientras alimentas a los tuyos."
     },
     {
         "linea": "capri",
@@ -88,7 +100,9 @@
         "capacidad": 3.3,
         "comensales": 4,
         "codigo": 38753330,
-        "imagenes": ["38753330.png", "38753330-1.jpg", "38753330-2.jpg"]
+        "imagenes": ["38753330.png", "38753330-1.jpg", "38753330-2.jpg"],
+        "titulo_venta": "Grillados Perfectos para Compartir",
+        "descripcion": "Logra el dorado perfecto en carnes y vegetales para 4 personas, como si usaras una parrilla pero en tu hornalla. Su diseño rectangular optimiza el espacio y facilita la limpieza tras cada uso. Dale un toque gourmet y moderno a tus cenas familiares."
     },
     {
         "linea": "capri",
@@ -103,7 +117,9 @@
             "38752930-2.jpg",
             "38752930-3.jpg",
             "38752930-4.jpg"
-        ]
+        ],
+        "titulo_venta": "Capacidad Máxima para Anfitriones",
+        "descripcion": "Diseñada para quienes aman recibir invitados o tienen familias numerosas, permitiendo cocinar a lo grande con comodidad. Su formato cuadrado aprovecha al máximo la superficie de cocción, ideal para platos rendidores. Combina la potencia de la cocción Essen con la belleza de la línea Capri."
     },
     {
         "linea": "capri",
@@ -118,7 +134,9 @@
             "38753030-2.jpg",
             "38753030-3.jpg",
             "38753030-4.jpg"
-        ]
+        ],
+        "titulo_venta": "Elegancia y Función en tu Mesa",
+        "descripcion": "Ideal para cocinar y llevar directamente a la mesa gracias a su diseño estético y moderno. Perfecta para lasañas y pasteles de 4 porciones, cocinando parejo y ahorrando gas. Su limpieza sencilla la convierte en una favorita para el uso diario."
     },
     {
         "linea": "terra",
@@ -132,7 +150,9 @@
             "38351866-1.jpg",
             "38351866-2.jpg",
             "38351866-3.jpg"
-        ]
+        ],
+        "titulo_venta": "La Pequeña Gran Aliada",
+        "descripcion": "Perfecta para parejas que buscan eficiencia y diseño en poco espacio. Cocina tartas y guisos con 'Efecto Horno', ahorrando tiempo y mucho gas. Su acabado Terra aporta un estilo natural y sofisticado a tu cocina diaria."
     },
     {
         "linea": "terra",
@@ -140,7 +160,9 @@
         "capacidad": 0.5,
         "comensales": 1,
         "codigo": 38222002,
-        "imagenes": ["38222002.png", "38222002-1.jpg", "38222002-2.jpg"]
+        "imagenes": ["38222002.png", "38222002-1.jpg", "38222002-2.jpg"],
+        "titulo_venta": "Tu Solución Rápida Individual",
+        "descripcion": "Ideal para resolver desayunos o comidas rápidas para uno, sin ensuciar de más. Su tamaño ultra compacto la hace facilísima de lavar y guardar, perfecta para solteros prácticos. Disfruta de la calidad Essen en su versión más ágil y moderna."
     },
     {
         "linea": "terra",
@@ -155,7 +177,9 @@
             "38452466-2.jpg",
             "38452466-3.jpg",
             "38452466-4.jpg"
-        ]
+        ],
+        "titulo_venta": "El Corazón de tu Hogar",
+        "descripcion": "La medida más elegida por las familias tipo, ideal para resolver todas las comidas de 4 personas. Reemplaza el horno completamente, logrando cocciones perfectas y un gran ahorro de gas. Su diseño Terra combina durabilidad con una estética moderna impecable."
     },
     {
         "linea": "terra",
@@ -170,7 +194,9 @@
             "38252466-2.jpg",
             "38252466-3.jpg",
             "38252466-4.jpg"
-        ]
+        ],
+        "titulo_venta": "Práctica y Moderna para Tres",
+        "descripcion": "La aliada perfecta para salteados, tortillas y tartas rápidas para una familia pequeña. Su antiadherente facilita la limpieza post-cena, haciendo tu rutina más liviana. El diseño Terra le da un toque distintivo y cálido a tu cocina."
     },
     {
         "linea": "terra",
@@ -185,7 +211,9 @@
             "38452866-2.jpg",
             "38452866-3.jpg",
             "38452866-4.jpg"
-        ]
+        ],
+        "titulo_venta": "Cocina para Todos con Estilo",
+        "descripcion": "Pensada para familias numerosas que necesitan cocinar en cantidad sin perder calidad ni sabor. Su 'Efecto Horno' te permite realizar preparaciones grandes ahorrando gas todos los días. Robusta y con el diseño moderno Terra, es la protagonista de tus reuniones."
     },
     {
         "linea": "terra",
@@ -199,7 +227,9 @@
             "38252866-1.jpg",
             "38252866-2.jpg",
             "38252866-3.jpg"
-        ]
+        ],
+        "titulo_venta": "Amplitud y Diseño para tu Familia",
+        "descripcion": "Ideal para preparar comidas abundantes como paellas o tartas XL para hasta 5 personas. Su gran superficie y fácil limpieza la hacen indispensable para familias grandes. Disfruta de la tecnología Essen con la estética contemporánea de la línea Terra."
     },
     {
         "linea": "terra",
@@ -207,7 +237,9 @@
         "capacidad": 1.7,
         "comensales": 2,
         "codigo": 38121702,
-        "imagenes": ["38121702.png"]
+        "imagenes": ["38121702.png"],
+        "titulo_venta": "Tu Compañero Multiuso Diario",
+        "descripcion": "Esencial para calentar bebidas, salsas o cocinar porciones pequeñas de pasta o arroz. Ideal para parejas o uso individual por su practicidad y rapidez de limpieza. Su diseño Terra lo hace lucir moderno incluso en las tareas más simples."
     },
     {
         "linea": "terra",
@@ -221,7 +253,9 @@
             "38752966-1.jpg",
             "38752966-2.jpg",
             "38752966-3.jpg"
-        ]
+        ],
+        "titulo_venta": "Cocina a lo Grande para Invitados",
+        "descripcion": "La mejor opción para familias numerosas o para quienes aman ser anfitriones de grandes cenas. Su formato optimiza el espacio de cocción, permitiendo recetas abundantes y rendidoras. Impacta a tus invitados con su capacidad y el diseño exclusivo Terra."
     },
     {
         "linea": "terra",
@@ -235,7 +269,9 @@
             "38753366-1.jpg",
             "38753366-2.jpg",
             "38753366-3.jpg"
-        ]
+        ],
+        "titulo_venta": "Parrilla en tu Cocina",
+        "descripcion": "Disfruta de carnes y verduras grilladas perfectas para 4, sin humo y con mínimo consumo de gas. Su diseño rectangular es súper versátil y fácil de manipular gracias a sus asas. La línea Terra suma un toque rústico moderno a tu experiencia culinaria."
     },
     {
         "linea": "terra",
@@ -250,7 +286,9 @@
             "38753066-2.jpg",
             "38753066-3.jpg",
             "38753066-4.jpg"
-        ]
+        ],
+        "titulo_venta": "Del Horno a la Mesa con Estilo",
+        "descripcion": "Ideal para hornear panes, lasañas o carnes y servir directamente con presentación de lujo. Su capacidad para 4 personas la hace perfecta para la cena familiar diaria. Combina la eficiencia térmica de Essen con la belleza estética de la línea Terra."
     },
     {
         "linea": "terra",
@@ -265,7 +303,9 @@
             "38123018-2.jpg",
             "38123018-3.jpg",
             "38123018-4.jpg"
-        ]
+        ],
+        "titulo_venta": "Tu Aliada Terra para Comidas Rápidas",
+        "descripcion": "La vuelta y vuelta más práctica del mercado, ahora con el estilo único de la línea Terra. Ideal para parejas o solteros, cocina tostados y carnes en minutos ahorrando gas. Su sistema desmontable facilita una limpieza profunda y rápida."
     },
     {
         "linea": "terra",
@@ -273,7 +313,9 @@
         "capacidad": 3,
         "comensales": 3,
         "codigo": 38223002,
-        "imagenes": ["38223002.png", "38223002-1.jpg", "38223002-2.jpg"]
+        "imagenes": ["38223002.png", "38223002-1.jpg", "38222002-2.jpg"],
+        "titulo_venta": "Cocina Oriental y Saludable en Casa",
+        "descripcion": "Perfecto para salteados de vegetales y carnes, conservando texturas y nutrientes para 3 personas. Su formato permite cocinar con menos aceite, ideal para una alimentación sana. El diseño Terra lo convierte en una pieza decorativa en tu cocina."
     },
     {
         "linea": "cerámica terra",
@@ -282,7 +324,9 @@
         "capacidad": 2.8,
         "comensales": 3,
         "codigo": 38252425,
-        "imagenes": ["38252425.jpg"]
+        "imagenes": ["38252425.jpg"],
+        "titulo_venta": "Tecnología Cerámica para Tu Familia",
+        "descripcion": "Experimenta la antiadherencia superior de la cerámica en tus comidas diarias para 3 personas. Ideal para cocciones delicadas y una limpieza aún más fácil y rápida. Su diseño Terra combina vanguardia tecnológica con estética moderna."
     },
     {
         "linea": "cerámica terra",
@@ -291,7 +335,9 @@
         "capacidad": 4.5,
         "comensales": 4,
         "codigo": 38452425,
-        "imagenes": ["38452425.jpg"]
+        "imagenes": ["38452425.jpg"],
+        "titulo_venta": "Innovación Cerámica para 4 Personas",
+        "descripcion": "La clásica cacerola familiar evolucionada con recubrimiento cerámico para máxima durabilidad y desmolde. Perfecta para guisos y risottos, cocinando parejo y ahorrando energía. Lleva la modernidad y eficiencia de la línea Terra a tu mesa."
     },
     {
         "linea": "cerámica terra",
@@ -300,7 +346,9 @@
         "capacidad": 6.4,
         "comensales": 6,
         "codigo": 38752925,
-        "imagenes": ["38752925.png"]
+        "imagenes": ["38752925.png"],
+        "titulo_venta": "Gran Capacidad con Tecnología Cerámica",
+        "descripcion": "Ideal para familias numerosas que buscan lo último en tecnología de cocina antiadherente. Cocina grandes volúmenes sin que nada se pegue, facilitando la limpieza posterior. Su estética Terra y formato cuadrado la hacen única y funcional."
     },
     {
         "linea": "cerámica terra",
@@ -309,14 +357,18 @@
         "capacidad": 2.1,
         "comensales": 2,
         "codigo": 38351825,
-        "imagenes": ["38351825.jpg"]
+        "imagenes": ["38351825.jpg"],
+        "titulo_venta": "Compacta y Cerámica para Parejas",
+        "descripcion": "La medida justa para dos, ahora con los beneficios del recubrimiento cerámico de alta gama. Ideal para sopas, cremas y guarniciones, limpiándose en un instante. Disfruta de la calidad Terra en su versión más práctica y eficiente."
     },
     {
         "linea": "nuit",
         "nombre": "plancha",
         "comensales": 6,
         "codigo": 38734472,
-        "imagenes": ["38734472.png"]
+        "imagenes": ["38734472.png"],
+        "titulo_venta": "Grillados Gourmet para Todos",
+        "descripcion": "Ideal para anfitriones exigentes, permite cocinar grandes parrilladas de vegetales y carnes en la hornalla. Su diseño elegante Nuit viste tu cocina de sofisticación mientras ahorras gas. Perfecta para recibir invitados y cocinar sano y rico."
     },
     {
         "linea": "nuit",
@@ -331,42 +383,54 @@
             "38142461-2.jpg",
             "38142461-3.jpg",
             "38142461-4.jpg"
-        ]
+        ],
+        "titulo_venta": "Sofisticación Práctica para Dos",
+        "descripcion": "La versatilidad del sistema Flip con la elegancia oscura de la línea Nuit. Ideal para parejas que valoran el diseño y la funcionalidad en cada comida. Cocina vuelta y vuelta, ahorra tiempo y limpia facilísimo."
     },
     {
         "linea": "nuit",
         "nombre": "set 24cm Cacerola 4,6 L | Bifera 2,3 L | Sartén 2 L",
         "comensales": 5,
         "codigo": 38941793,
-        "imagenes": ["38941793.png"]
+        "imagenes": ["38941793.png"],
+        "titulo_venta": "La Solución Completa y Elegante",
+        "descripcion": "Equipa tu cocina de una vez con las piezas esenciales para una familia tipo. Versatilidad total para hervir, guisar, grillar y saltear, todo con la estética premium Nuit. Ahorra gas y tiempo con el set que resuelve todas tus necesidades culinarias."
     },
     {
         "linea": "nuit",
         "nombre": "set 28cm Cacerola 6,1 L | Bifera 3,1 L | Sartén 2,7 L",
         "comensales": 6,
         "codigo": 38941593,
-        "imagenes": ["38941593.png"]
+        "imagenes": ["38941593.png"],
+        "titulo_venta": "El Set Definitivo para Grandes Familias",
+        "descripcion": "Todo lo que una familia numerosa necesita para cocinar a lo grande con estilo y eficiencia. Cubre todas las técnicas de cocción con capacidades generosas, ideal para el uso diario intenso. La línea Nuit aporta un toque de distinción inigualable a tu hogar."
     },
     {
         "linea": "a inducción",
         "nombre": "bifera",
         "medida": "24",
         "codigo": 38647593,
-        "imagenes": ["38647593.png"]
+        "imagenes": ["38647593.png"],
+        "titulo_venta": "Grillados Perfectos en Inducción",
+        "descripcion": "Lleva el sabor del grill a tu cocina de inducción con la máxima eficiencia energética. Ideal para carnes y verduras doradas por fuera y tiernas por dentro. Su tecnología avanzada asegura una cocción pareja y veloz."
     },
     {
         "linea": "a inducción",
         "nombre": "cacerola con tapa sartén",
         "medida": "24",
         "codigo": 38941993,
-        "imagenes": ["38941993.jpg"]
+        "imagenes": ["38941993.jpg"],
+        "titulo_venta": "Dúo Dinámico para Inducción",
+        "descripcion": "Maximiza tu espacio y opciones de cocción con este set versátil 2 en 1. Cacerola para guisos y tapa que funciona como sartén, ideal para cocinas modernas. Aprovecha la rapidez de la inducción con la calidad de cocción Essen."
     },
     {
         "linea": "a inducción",
         "nombre": "set",
         "medida": "24",
         "codigo": 1,
-        "imagenes": ["1.png"]
+        "imagenes": ["1.png"],
+        "titulo_venta": "Kit Esencial para Cocina a Inducción",
+        "descripcion": "La combinación perfecta de piezas para equipar tu cocina a inducción con lo mejor. Versatilidad para todas tus recetas diarias con el máximo ahorro de energía. Disfruta de tecnología de punta y resultados deliciosos."
     },
     {
         "linea": "fusión",
@@ -375,27 +439,35 @@
         "capacidad": 4.9,
         "comensales": 4,
         "codigo": 38002410,
-        "imagenes": ["38002410.jpg"]
+        "imagenes": ["38002410.jpg"],
+        "titulo_venta": "Elegancia en Acero Inoxidable",
+        "descripcion": "Para los amantes del acero y la cocina tradicional con un toque moderno. Ideal para una familia tipo, ofrece durabilidad eterna y una higiene impecable. Cocina sopas y pastas con estilo y calidad profesional."
     },
     {
         "linea": "especiales",
         "nombre": "kamado",
         "comensales": 6,
         "codigo": 38773248,
-        "imagenes": ["38773248.jpg"]
+        "imagenes": ["38773248.jpg"],
+        "titulo_venta": "La Experiencia Ahumada en Casa",
+        "descripcion": "Transforma tu forma de cocinar con técnicas de ahumado y cocción lenta para grandes grupos. Ideal para recibir invitados y sorprender con sabores únicos y texturas increíbles. Una pieza especial para quienes disfrutan el ritual de la cocina."
     },
     {
         "linea": "especiales",
         "nombre": "robot de cocina rein",
         "codigo": 70050010,
-        "imagenes": ["70050010.png"]
+        "imagenes": ["70050010.png"],
+        "titulo_venta": "Tu Asistente Inteligente en la Cocina",
+        "descripcion": "Simplifica tu vida automatizando picado, amasado y cocción en un solo equipo. Ideal para ahorrar tiempo y esfuerzo, permitiéndote crear platos complejos fácilmente. La tecnología al servicio de tu creatividad culinaria."
     },
     {
         "linea": "especiales",
         "nombre": "set grill & nuit",
         "comensales": 6,
         "codigo": 38954472,
-        "imagenes": ["38954472.jpg"]
+        "imagenes": ["38954472.jpg"],
+        "titulo_venta": "Set Premium para Anfitriones",
+        "descripcion": "La combinación de lujo para quienes aman agasajar con estilo y calidad. Incluye piezas clave para grillados y cocciones abundantes con la elegancia Nuit. Sorprende a tus invitados con el mejor equipamiento Essen."
     },
     {
         "linea": "especiales",
@@ -403,7 +475,9 @@
         "medida": "49x27",
         "comensales": 6,
         "codigo": 38734372,
-        "imagenes": ["38734372.jpg"]
+        "imagenes": ["38734372.jpg"],
+        "titulo_venta": "Parrilla Urbana para Interiores",
+        "descripcion": "Lleva la experiencia de la parrilla a tu cocina con gran superficie para cocinar para muchos. Ideal para departamentos, sin humo y con marcas de grillado perfectas. Cocina carnes y vegetales a lo grande, cualquier día de la semana."
     },
     {
         "linea": "complementos",
@@ -411,7 +485,9 @@
         "medida": "18",
         "capacidad": 1,
         "codigo": 38801585,
-        "imagenes": ["38801585.png"]
+        "imagenes": ["38801585.png"],
+        "titulo_venta": "Repostería Fácil en tu Cacerola 18cm",
+        "descripcion": "Convierte tu cacerola en un horno con este complemento esencial para budines y flanes. Ideal para porciones pequeñas, cocina parejo y desmolda perfecto siempre. Imprescindible para sacarle el máximo provecho a tu Essen."
     },
     {
         "linea": "complementos",
@@ -419,7 +495,9 @@
         "medida": "24",
         "capacidad": 2,
         "codigo": 38801385,
-        "imagenes": ["38801385.png"]
+        "imagenes": ["38801385.png"],
+        "titulo_venta": "El Secreto de los Budines Altos",
+        "descripcion": "El complemento estrella para tu cacerola de 24cm, ideal para cocinar tortas esponjosas sin prender el horno. Ahorra muchísimo gas y logra cocciones húmedas y parejas. Fácil de usar y limpiar, eleva tu repostería casera."
     },
     {
         "linea": "complementos",
@@ -427,162 +505,212 @@
         "medida": "28",
         "capacidad": 3.5,
         "codigo": 38801685,
-        "imagenes": ["38801685.png"]
+        "imagenes": ["38801685.png"],
+        "titulo_venta": "Repostería XL para Toda la Familia",
+        "descripcion": "Para bizcochuelos altos y grandes que rinden para todos, usando tu cacerola de 28cm. Olvídate del horno a gas y cocina postres increíbles ahorrando energía. Su diseño con chimenea central asegura una cocción perfecta en el centro."
     },
     {
         "linea": "complementos",
         "nombre": "vaporizador",
         "medida": "18/28",
         "codigo": 38802384,
-        "imagenes": ["38802384.png"]
+        "imagenes": ["38802384.png"],
+        "titulo_venta": "Cocina Sana al Vapor",
+        "descripcion": "Adaptable a varias medidas, es ideal para cocinar vegetales y pescados conservando todos sus nutrientes. Suma salud a tu dieta diaria de forma práctica y sencilla. Un accesorio clave para una alimentación equilibrada usando tus cacerolas."
     },
     {
         "linea": "complementos",
         "nombre": "budineras terra x2",
         "medida": "28-30",
         "codigo": 38802184,
-        "imagenes": ["38802184.png"]
+        "imagenes": ["38802184.png"],
+        "titulo_venta": "Dúo para Budines Simultáneos",
+        "descripcion": "Maximiza tu tiempo cocinando dos budines a la vez en tu pieza cuadrada o rectangular. Ideal para meal prep o para tener opciones dulces y saladas en una sola cocción. Prácticas, antiadherentes y con el estilo Terra."
     },
     {
         "linea": "bazar",
         "nombre": "mandolina de mano con sujetador",
         "codigo": 60050209,
-        "imagenes": ["60050209.png"]
+        "imagenes": ["60050209.png"],
+        "titulo_venta": "Cortes Precisos y Seguros",
+        "descripcion": "Agiliza tu cocina logrando rebanadas perfectas de frutas y verduras en segundos. Su sujetador protege tus manos, haciendo que cocinar sea seguro y rápido. Indispensable para ensaladas, papas noisette y decoraciones."
     },
     {
         "linea": "bazar",
         "nombre": "cuchillo chef",
         "medida": "33",
         "codigo": 60050184,
-        "imagenes": ["60050184.jpg"]
+        "imagenes": ["60050184.jpg"],
+        "titulo_venta": "Tu Herramienta Principal de Chef",
+        "descripcion": "El cuchillo versátil que no puede faltar, ideal para picar, rebanar y trozar con precisión profesional. Su filo duradero y mango ergonómico te dan control total. Eleva tu nivel en la cocina con la calidad Bazar Essen."
     },
     {
         "linea": "bazar",
         "nombre": "cuchillo santoku",
         "medida": "31",
         "codigo": 60050183,
-        "imagenes": ["60050183.jpg"]
+        "imagenes": ["60050183.jpg"],
+        "titulo_venta": "Precisión Oriental en tu Cocina",
+        "descripcion": "Especialmente diseñado para picar vegetales, carnes y pescados con cortes limpios y finos. Sus alvéolos evitan que los alimentos se peguen a la hoja, facilitando el trabajo rápido. Un must para cocinar cómodo y eficiente."
     },
     {
         "linea": "bazar",
         "nombre": "cuchillo utility",
         "medida": "24",
         "codigo": 60050182,
-        "imagenes": ["60050182.jpg"]
+        "imagenes": ["60050182.jpg"],
+        "titulo_venta": "El Multiuso Diario Imprescindible",
+        "descripcion": "Ligero y maniobrable, perfecto para tareas cotidianas como cortar frutas, quesos o sándwiches. Su tamaño intermedio lo hace el más usado del cajón. Calidad de acero superior para un corte siempre afilado."
     },
     {
         "linea": "bazar",
         "nombre": "cuchillo carving",
         "medida": "33",
         "codigo": 60050181,
-        "imagenes": ["60050181.jpg"]
+        "imagenes": ["60050181.jpg"],
+        "titulo_venta": "El Especialista en Carnes",
+        "descripcion": "Diseñado para filetear carnes asadas y aves con trazos largos y precisos. Su hoja delgada y filosa asegura que no desgranes la carne al servir. Ideal para lucirte en el asado o la cena festiva."
     },
     {
         "linea": "bazar",
         "nombre": "afilador de cuchillos 4 pasos",
         "codigo": 60050204,
-        "imagenes": ["60050204.jpg"]
+        "imagenes": ["60050204.jpg"],
+        "titulo_venta": "Cuchillos Siempre Como Nuevos",
+        "descripcion": "Mantén el filo de tus herramientas al máximo con este sistema de afilado completo y seguro. Recupera cuchillos viejos y mantiene los nuevos en 4 simples pasos. Básico para trabajar cómodo y seguro en la cocina."
     },
     {
         "linea": "bazar",
         "nombre": "tabla de bamboo cocina",
         "medida": "30x40",
         "codigo": 60050203,
-        "imagenes": ["60050203.jpg"]
+        "imagenes": ["60050203.jpg"],
+        "titulo_venta": "La Base Natural de tu Cocina",
+        "descripcion": "Amplia superficie de corte en bambú ecológico, resistente y amable con el filo de tus cuchillos. Ideal para picar ingredientes de grandes preparaciones con comodidad. Higiénica, duradera y con un diseño cálido."
     },
     {
         "linea": "bazar",
         "nombre": "tabla de bamboo cocina",
         "medida": "30x30",
         "codigo": 60050202,
-        "imagenes": ["60050202.jpg"]
+        "imagenes": ["60050202.jpg"],
+        "titulo_venta": "Práctica y Ecológica",
+        "descripcion": "El tamaño perfecto para las tareas diarias rápidas en una cocina moderna. Hecha de bambú sustentable, resiste la humedad y cuida tus cuchillos. Un complemento funcional y estético para tu mesada."
     },
     {
         "linea": "bazar",
         "nombre": "rallador de mano grado fino",
         "medida": "34x60x2",
         "codigo": 60050199,
-        "imagenes": ["60050199.jpg"]
+        "imagenes": ["60050199.jpg"],
+        "titulo_venta": "Zesten y Quesos Finos al Instante",
+        "descripcion": "Logra ralladuras cítricas, nuez moscada o queso parmesano en lluvia ultra fina sin esfuerzo. Cuchillas de acero inoxidable de alta precisión y mango antideslizante. El toque gourmet final para tus platos y postres."
     },
     {
         "linea": "bazar",
         "nombre": "rallador de mano grado medio",
         "medida": "34x60x2",
         "codigo": 60050198,
-        "imagenes": ["60050198.jpg"]
+        "imagenes": ["60050198.jpg"],
+        "titulo_venta": "Rallado Versátil Diario",
+        "descripcion": "Ideal para quesos semiduros, chocolate y vegetales, logrando una textura perfecta. Su diseño ergonómico hace que rallar sea cómodo y seguro. Indispensable para pastas y ensaladas."
     },
     {
         "linea": "bazar",
         "nombre": "rallador de mano grado grueso",
         "medida": "34x60x2",
         "codigo": 60050200,
-        "imagenes": ["60050200.jpg"]
+        "imagenes": ["60050200.jpg"],
+        "titulo_venta": "Textura y Sabor en Tus Ingredientes",
+        "descripcion": "Perfecto para queso en hebras, zanahorias y manzanas, aportando cuerpo a tus preparaciones. Cuchillas afiladas que no desgarran el alimento, sino que lo cortan limpiamente. Robusto y fácil de lavar."
     },
     {
         "linea": "bazar",
         "nombre": "rallador de mano tipo cintas",
         "medida": "34x60x2",
         "codigo": 60050205,
-        "imagenes": ["60050205.jpg"]
+        "imagenes": ["60050205.jpg"],
+        "titulo_venta": "Decoración Gourmet con Cintas",
+        "descripcion": "Crea láminas finas de chocolate, queso o vegetales para decorar como un profesional. Ideal para finalizar platos y postres con una presentación visual impactante. Calidad de acero inoxidable para resultados perfectos."
     },
     {
         "linea": "bazar",
         "nombre": "bombilla regulable de acero inoxidable con difusor",
         "codigo": 60050207,
-        "imagenes": ["60050207.jpg"]
+        "imagenes": ["60050207.jpg"],
+        "titulo_venta": "Tu Mate Siempre Perfecto",
+        "descripcion": "Diseñada para evitar que se tape, con filtro regulable para distintos tipos de yerba. Fabricada en acero inoxidable para máxima higiene y durabilidad. Disfruta de la mejor experiencia matera con calidad Essen."
     },
     {
         "linea": "bazar",
         "nombre": "mate térmico",
         "codigo": 60050197,
-        "imagenes": ["60050197.jpg"]
+        "imagenes": ["60050197.jpg"],
+        "titulo_venta": "Mate Caliente por Más Tiempo",
+        "descripcion": "Mantiene la temperatura del agua y la yerba ideal por más tiempo gracias a su aislación térmica. Diseño moderno y ergonómico que no calienta la mano. El compañero ideal para tus mañanas y tardes."
     },
     {
         "linea": "bazar",
         "nombre": "set mate neo",
         "codigo": 60050133,
-        "imagenes": ["60050177.jpg"]
+        "imagenes": ["60050177.jpg"],
+        "titulo_venta": "Kit Matero Moderno Neo",
+        "descripcion": "Renueva tu ritual del mate con este set de diseño contemporáneo y funcional. Incluye mate de fácil limpieza y accesorios combinados. Ideal para regalar o regalarse un momento de relax."
     },
     {
         "linea": "bazar",
         "nombre": "set mate nuit",
         "codigo": 60050177,
-        "imagenes": ["60050177.jpg"]
+        "imagenes": ["60050177.jpg"],
+        "titulo_venta": "Elegancia Oscura para tu Mate",
+        "descripcion": "La sofisticación de la línea Nuit llevada al ritual del mate argentino. Diseño exclusivo en tonos oscuros que combina estilo y tradición. Disfruta de un mate con distinción."
     },
     {
         "linea": "bazar",
         "nombre": "asas de silicona linea acero inoxidable",
         "codigo": 60050219,
-        "imagenes": ["60050219.jpg"]
+        "imagenes": ["60050219.jpg"],
+        "titulo_venta": "Seguridad y Agarre Térmico",
+        "descripcion": "Protege tus manos al manipular las cacerolas calientes con estas asas de silicona a medida. Resistentes al calor y antideslizantes para un manejo seguro en la cocina. El accesorio de seguridad indispensable."
     },
     {
         "linea": "bazar",
         "nombre": "bowls de acero con tapa set x 3 negro",
         "codigo": 60050210,
-        "imagenes": ["60050210.jpg"]
+        "imagenes": ["60050210.jpg"],
+        "titulo_venta": "Organización Premium en Acero",
+        "descripcion": "Set de 3 bowls de acero inoxidable con tapa, ideales para preparar, servir y guardar. Su diseño encastrable ahorra espacio y las tapas permiten conservar alimentos en heladera. Durabilidad y estética profesional para tu cocina."
     },
     {
         "linea": "bazar",
         "nombre": "abrelatas 5 en 1",
         "codigo": 60050109,
-        "imagenes": ["60050109.png"]
+        "imagenes": ["60050109.png"],
+        "titulo_venta": "La Herramienta Multifunción Definitiva",
+        "descripcion": "Abre latas, botellas, frascos y más con un solo utensilio inteligente y ergonómico. Ahorra espacio en tu cajón reemplazando varias herramientas por una sola de calidad. Práctico, seguro y fácil de usar para todos."
     },
     {
         "linea": "bazar",
         "nombre": "aceite arbequina x3 unidades",
         "codigo": 67700718,
-        "imagenes": ["67700718.jpg"]
+        "imagenes": ["67700718.jpg"],
+        "titulo_venta": "Sabor Gourmet en tu Cocina",
+        "descripcion": "Trio de aceites de oliva variedad Arbequina premiun para realzar tus comidas. Ideal para finalizar platos, ensaladas y cocinar sano con el mejor sabor. Calidad Essen también en tus ingredientes."
     },
     {
         "linea": "bazar",
         "nombre": "vaso térmico 520ml",
         "codigo": 60050206,
-        "imagenes": ["60050206.jpg"]
+        "imagenes": ["60050206.jpg"],
+        "titulo_venta": "Tu Bebida a Temperatura Ideal Donde Vayas",
+        "descripcion": "Lleva tu café caliente o agua helada a todos lados con este vaso de gran capacidad. Su doble pared de acero mantiene la temperatura por horas sin condensar. Diseño urbano y tapa segura para acompañarte en tu día."
     },
     {
         "linea": "bazar",
         "nombre": "cafetera italiana essen",
         "codigo": 60050208,
-        "imagenes": ["60050208.jpg"]
+        "imagenes": ["60050208.jpg"],
+        "titulo_venta": "El Auténtico Café Espresso en Casa",
+        "descripcion": "Prepara café con cuerpo y aroma intenso al estilo italiano clásico. Su diseño en aluminio de alta calidad asegura una distribución de calor perfecta. Disfruta de la tradición del buen café con la garantía Essen."
     }
 ]
