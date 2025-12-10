@@ -3,6 +3,7 @@ import ProductFilter from '@/src/features/products/components/ProductFilter'
 import { Product } from '@/src/features/products/types'
 import { getLines, getProducts, getServings } from '@/src/features/products/utils'
 import styles from './page.module.css'
+import { Suspense } from 'react'
 
 interface Props {
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>
@@ -33,11 +34,13 @@ export default async function Products({ searchParams }: Props) {
 
     return (
         <div className={styles.container}>
-            <ProductFilter
-                currentFilters={{ linea, comensales, medida, nombre }}
-                lines={lines}
-                servings={servings}
-            />
+            <Suspense fallback={<div>Cargando filtros...</div>}>
+                <ProductFilter
+                    currentFilters={{ linea, comensales, medida, nombre }}
+                    lines={lines}
+                    servings={servings}
+                />
+            </Suspense>
             <ProductList products={filtered} />
         </div>
     )
