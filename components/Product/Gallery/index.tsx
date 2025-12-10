@@ -19,7 +19,8 @@ export default function Gallery({ images }: ProductGalleryProps) {
                     alt="Product image"
                     fill
                     className={styles.image}
-                    sizes="(max-width: 768px) 100vw, 400px"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                    quality={85}
                     priority
                 />
             </div>
@@ -30,9 +31,8 @@ export default function Gallery({ images }: ProductGalleryProps) {
                     <button
                         key={i}
                         onClick={() => setSelectedImage(img)}
-                        className={`${styles.thumb} ${
-                            img === selectedImage ? styles.active : ''
-                        }`}
+                        className={`${styles.thumb} ${img === selectedImage ? styles.active : ''
+                            }`}
                     >
                         <Image
                             src={`/images/products/${img}`}
@@ -40,6 +40,8 @@ export default function Gallery({ images }: ProductGalleryProps) {
                             fill
                             className={styles.thumbImage}
                             sizes="80px"
+                            quality={75}
+                            loading="lazy"
                         />
                     </button>
                 ))}

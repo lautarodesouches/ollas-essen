@@ -1,10 +1,21 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '@/app/page.module.css'
 import { ROUTES } from '@/routes'
 
 export default function Hero() {
     return (
         <section className={styles.start}>
+            <Image
+                src="/images/kitchen.jpg"
+                alt="Cocina moderna con productos Essen"
+                fill
+                className={styles.startImage}
+                priority
+                quality={85}
+                sizes="100vw"
+            />
+            <div className={styles.startOverlay} />
             <h2 className={styles.start__title}>
                 Descubre la Magina de Cocinar con Essen
             </h2>

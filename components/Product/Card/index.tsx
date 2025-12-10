@@ -22,6 +22,9 @@ export default function Card({ product }: Props) {
                     alt={product.nombre || ''}
                     width={300}
                     height={300}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
+                    quality={80}
+                    loading="lazy"
                 />
                 <h4>
                     {product.nombre} {product.medida && `${product.medida}cm`} -{' '}
