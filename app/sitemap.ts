@@ -1,8 +1,10 @@
 import { MetadataRoute } from 'next'
 import { generateSlug, getProducts } from '@/utils'
+import { NEXT_PUBLIC_BASE_URL } from '@/constants'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://ollasessen.com.ar'
+
+    const baseUrl = NEXT_PUBLIC_BASE_URL
 
     // Rutas estáticas
     const staticRoutes: MetadataRoute.Sitemap = [

@@ -1,0 +1,65 @@
+.filtersSkeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.fieldSkeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.labelSkeleton {
+    width: 80px;
+    height: 16px;
+    border-radius: 4px;
+    background: linear-gradient(
+        90deg,
+        var(--light-grey) 25%,
+        #f0f0f0 50%,
+        var(--light-grey) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.inputSkeleton {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background: linear-gradient(
+        90deg,
+        var(--light-grey) 25%,
+        #f0f0f0 50%,
+        var(--light-grey) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .filtersSkeleton {
+        flex-direction: row;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .fieldSkeleton {
+        flex: 1;
+        min-width: 200px;
+    }
+}

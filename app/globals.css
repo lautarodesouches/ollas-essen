@@ -1,12 +1,25 @@
 :root {
-    --primary: #374151;
-    --secondary: #b91c1c;
-    --accent: #d97706;
+    /* Colores principales */
+    --primary: #ff7900;
+    --primary-light: #ff9933;
+    --primary-dark: #cc6100;
+    
+    --secondary: #111d2d;
+    --secondary-light: #1a2d42;
+    --secondary-dark: #0a1018;
+    
+    /* Colores de acento y estados */
+    --accent: #ff7900;
     --success: #10b981;
-
+    --warning: #f59e0b;
+    --error: #ef4444;
+    
+    /* Escala de grises */
     --white: #ffffff;
     --light: #f8f8f8;
+    --light-grey: #e5e7eb;
     --grey: #6b7280;
+    --dark-grey: #374151;
     --dark: #1f2937;
     --black: #111827;
 }
