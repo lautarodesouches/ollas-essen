@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { capitalize, getProductBySlug } from '@/utils'
+import { capitalize, generateSlug, getProductBySlug, getProducts } from '@/utils'
 import styles from './page.module.css'
 import Link from 'next/link'
 import { ROUTES } from '@/routes'
@@ -17,6 +17,21 @@ import {
 
 interface Props {
     params: Promise<{ slug: string }>
+}
+
+// Forzar renderizado estático
+export const dynamic = 'force-static'
+
+// Regenerar páginas cada hora (ISR)
+export const revalidate = 3600
+
+// Pre-generar todas las rutas de productos durante el build
+export async function generateStaticParams() {
+    const products = await getProducts()
+
+    return products.map(product => ({
+        slug: generateSlug(product)
+    }))
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -93,14 +108,11 @@ export default async function Product({ params }: Props) {
                         <div className={styles.buttons}>
                             <TrackedLink
                                 href={`https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
-                                    `¡Hola! Estoy interesado/a en el producto ${
-                                        product.nombre
-                                    }${
-                                        product.medida
-                                            ? ` ${product.medida}cm`
-                                            : ''
-                                    } de la línea ${
-                                        product.linea
+                                    `¡Hola! Estoy interesado/a en el producto ${product.nombre
+                                    }${product.medida
+                                        ? ` ${product.medida}cm`
+                                        : ''
+                                    } de la línea ${product.linea
                                     }. ¿Podrías darme más información?`
                                 )}`}
                                 target="_blank"
@@ -111,14 +123,11 @@ export default async function Product({ params }: Props) {
                             </TrackedLink>
                             <TrackedLink
                                 href={`https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
-                                    `¡Hola! Quería consultar el precio de ${
-                                        product.nombre
-                                    }${
-                                        product.medida
-                                            ? ` ${product.medida}cm`
-                                            : ''
-                                    } de la línea ${
-                                        product.linea
+                                    `¡Hola! Quería consultar el precio de ${product.nombre
+                                    }${product.medida
+                                        ? ` ${product.medida}cm`
+                                        : ''
+                                    } de la línea ${product.linea
                                     }`
                                 )}`}
                                 target="_blank"
@@ -160,12 +169,10 @@ export default async function Product({ params }: Props) {
                             </ul>
                             <TrackedLink
                                 href={`https://wa.me/${WHATSAPP__NUMBER}?text=${encodeURIComponent(
-                                    `¡Hola! Estoy interesado/a en las promociones de ${
-                                        product.nombre
-                                    }${
-                                        product.medida
-                                            ? ` ${product.medida}cm`
-                                            : ''
+                                    `¡Hola! Estoy interesado/a en las promociones de ${product.nombre
+                                    }${product.medida
+                                        ? ` ${product.medida}cm`
+                                        : ''
                                     } de la línea ${product.linea}`
                                 )}`}
                                 target="_blank"
