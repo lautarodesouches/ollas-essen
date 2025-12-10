@@ -1,341 +1,244 @@
-import Link from 'next/link'
+import Image from 'next/image'
 import styles from './page.module.css'
 import { ROUTES } from '@/src/config/routes'
 import TrackedLink from '@/src/features/tracking/components/TrackedLink'
 
+// Import de Iconos
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faWallet,
+    faClock,
+    faMoneyBillWave,
+    faCoins,
+    faShieldHeart,
+    faTruckFast,
+    faBagShopping,
+    faPlaneDeparture,
+    faUsers,
+    faGraduationCap,
+    faHandshake,
+    faComments
+} from '@fortawesome/free-solid-svg-icons'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+
 export default function Emprender() {
     return (
         <div className={styles.container}>
-            {/* Hero Section */}
+            {/* HERO SECTION */}
             <section className={styles.hero}>
-                <div className={styles.hero__content}>
-                    <h1 className={styles.hero__title}>
-                        Transformá tu vida con el emprendimiento perfecto
+                <div className={styles.heroContent}>
+                    <h1 className={styles.heroTitle}>
+                        Tu negocio, tus tiempos, <span>tus reglas</span>.
                     </h1>
-                    <p className={styles.hero__subtitle}>
-                        Hace dos años dimos el paso que cambió todo. Hoy te
-                        invitamos a que des el tuyo.
+                    <p className={styles.heroSubtitle}>
+                        Emprendé con Essen y transformá tu pasión en ingresos reales.
+                        Sin jefes, sin horarios fijos y con el respaldo de la marca líder.
                     </p>
-                    <div className={styles.hero__benefits}>
-                        <div className={styles.hero__benefitItem}>
-                            <span className={styles.hero__checkIcon}>✓</span>
+
+                    <div className={styles.heroBenefits}>
+                        <div className={styles.benefitItem}>
+                            <FontAwesomeIcon icon={faWallet} className={styles.benefitIcon} />
                             <span>Sin inversión inicial</span>
                         </div>
-                        <div className={styles.hero__benefitItem}>
-                            <span className={styles.hero__checkIcon}>✓</span>
+                        <div className={styles.benefitItem}>
+                            <FontAwesomeIcon icon={faMoneyBillWave} className={styles.benefitIcon} />
                             <span>Ingresos desde el primer día</span>
                         </div>
-                        <div className={styles.hero__benefitItem}>
-                            <span className={styles.hero__checkIcon}>✓</span>
-                            <span>Trabajá desde donde quieras</span>
+                        <div className={styles.benefitItem}>
+                            <FontAwesomeIcon icon={faClock} className={styles.benefitIcon} />
+                            <span>Manejá tus propios horarios</span>
                         </div>
                     </div>
-                    <TrackedLink href={ROUTES.WHATSAPP}>
-                        <button className={styles.hero__cta}>
-                            Quiero comenzar ahora
-                        </button>
-                    </TrackedLink>
-                    <p className={styles.hero__note}>
-                        Charla informativa sin compromiso
+
+                    <div className={styles.heroCtaContainer}>
+                        <TrackedLink href={ROUTES.WHATSAPP}>
+                            <button className={styles.primaryButton}>
+                                <FontAwesomeIcon icon={faWhatsapp} size="lg" />
+                                Quiero mi independencia
+                            </button>
+                        </TrackedLink>
+                        <p className={styles.heroNote}>
+                            Charla informativa de 15 min sin compromiso
+                        </p>
+                    </div>
+                </div>
+                <div className={styles.heroImage}>
+                    <Image
+                        src="/images/join/hero.jpg"
+                        alt="Emprendedora feliz"
+                        fill
+                        priority
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className={styles.imgCover}
+                    />
+                </div>
+            </section>
+
+            {/* TRUST BAR (Derribando Miedos) */}
+            <section className={styles.trustBar}>
+                <div className={styles.trustGrid}>
+                    <div className={styles.trustItem}>
+                        <FontAwesomeIcon icon={faCoins} className={styles.trustIcon} />
+                        <h3 className={styles.trustTitle}>Cero Inversión</h3>
+                        <p className={styles.trustDesc}>Tu cliente paga, vos pedís. No ponés dinero de tu bolsillo.</p>
+                    </div>
+                    <div className={styles.trustItem}>
+                        <FontAwesomeIcon icon={faShieldHeart} className={styles.trustIcon} />
+                        <h3 className={styles.trustTitle}>Sin Riesgos</h3>
+                        <p className={styles.trustDesc}>Sin stock obligatorio ni compras mínimas mensuales.</p>
+                    </div>
+                    <div className={styles.trustItem}>
+                        <FontAwesomeIcon icon={faTruckFast} className={styles.trustIcon} />
+                        <h3 className={styles.trustTitle}>Logística Resuelta</h3>
+                        <p className={styles.trustDesc}>Essen se encarga de los envíos a todo el país.</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* INCOME TIERS (Crecimiento) */}
+            <section className={styles.incomeSection}>
+                <div className={styles.sectionHeader}>
+                    <h2 className={styles.sectionTitle}>Un plan de carrera a tu medida</h2>
+                    <p className={styles.sectionSubtitle}>
+                        El techo lo ponés vos. Conocé cómo podés crecer mes a mes.
                     </p>
                 </div>
-                <div className={styles.hero__image}>
-                    {/* Imagen: Persona feliz trabajando desde casa con laptop */}
-                </div>
-            </section>
 
-            {/* Why Section */}
-            <section className={styles.why}>
-                <div className={styles.why__content}>
-                    <h2 className={styles.why__title}>
-                        ¿Por qué miles eligen Essen para emprender?
-                    </h2>
-                    <p className={styles.why__intro}>
-                        Descubrí el negocio que combina{' '}
-                        <strong>libertad financiera</strong> con{' '}
-                        <strong>calidad premium</strong>
-                    </p>
-
-                    <div className={styles.why__featureGrid}>
-                        <div className={styles.why__featureCard}>
-                            <div className={styles.why__featureIcon}>🛡️</div>
-                            <h3 className={styles.why__featureTitle}>
-                                Cero Riesgo
-                            </h3>
-                            <p className={styles.why__featureDescription}>
-                                Tu cliente paga primero, vos comprás después.
-                                Sin stock ni pérdidas.
-                            </p>
+                <div className={styles.tiersGrid}>
+                    {/* Tier 1 */}
+                    <div className={styles.tierCard}>
+                        <div className={styles.tierHeader}>
+                            <FontAwesomeIcon icon={faBagShopping} className={styles.tierIcon} />
+                            <h3 className={styles.tierName}>Ventas Personales</h3>
                         </div>
-
-                        <div className={styles.why__featureCard}>
-                            <div className={styles.why__featureIcon}>💸</div>
-                            <h3 className={styles.why__featureTitle}>
-                                Cero Inversión
-                            </h3>
-                            <p className={styles.why__featureDescription}>
-                                No necesitás poner dinero para empezar. Solo tus
-                                ganas de crecer.
-                            </p>
-                        </div>
-
-                        <div className={styles.why__featureCard}>
-                            <div className={styles.why__featureIcon}>⏰</div>
-                            <h3 className={styles.why__featureTitle}>
-                                Horarios Flexibles
-                            </h3>
-                            <p className={styles.why__featureDescription}>
-                                Trabajá desde tu casa, en tus tiempos. Sos tu
-                                propio jefe.
-                            </p>
-                        </div>
-
-                        <div className={styles.why__featureCard}>
-                            <div className={styles.why__featureIcon}>📈</div>
-                            <h3 className={styles.why__featureTitle}>
-                                Ganancias Reales
-                            </h3>
-                            <p className={styles.why__featureDescription}>
-                                Hasta 24% de comisión por venta + premios +
-                                bonos extras.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.why__image}>
-                    {/* Imagen: Productos Essen elegantes y familia feliz cocinando */}
-                </div>
-            </section>
-
-            {/* Income Section */}
-            <section className={styles.income}>
-                <div className={styles.income__header}>
-                    <h2 className={styles.income__title}>
-                        Tu potencial de ingresos con Essen
-                    </h2>
-                </div>
-
-                <div className={styles.income__grid}>
-                    <div className={styles.income__tier}>
-                        <div className={styles.income__tierHeader}>
-                            <h3 className={styles.income__tierName}>
-                                Emprendedor Base
-                            </h3>
-                        </div>
-                        <ul className={styles.income__benefits}>
-                            <li className={styles.income__benefitItem}>
-                                4-6 ventas mensuales
+                        <ul className={styles.tierList}>
+                            <li className={styles.tierItem}>
+                                <span className={styles.checkIcon}>✓</span>
+                                Altas ganancias por ventas
                             </li>
-                            <li className={styles.income__benefitItem}>
-                                Comisión del 24%
+                            <li className={styles.tierItem}>
+                                <span className={styles.checkIcon}>✓</span>
+                                Premios mensuales (Productos Essen)
                             </li>
-                            <li className={styles.income__benefitItem}>
-                                Capacitación inicial
+                            <li className={styles.tierItem}>
+                                <span className={styles.checkIcon}>✓</span>
+                                Capacitación constante
                             </li>
                         </ul>
                     </div>
 
-                    <div className={styles.income__tier}>
-                        <div className={styles.income__tierHeader}>
-                            <h3 className={styles.income__tierName}>
-                                Emprendedor Activo
-                            </h3>
+                    {/* Tier 2 */}
+                    <div className={styles.tierCard}>
+                        <div className={styles.tierHeader}>
+                            <FontAwesomeIcon icon={faUsers} className={styles.tierIcon} />
+                            <h3 className={styles.tierName}>Construcción de Equipo</h3>
                         </div>
-                        <ul className={styles.income__benefits}>
-                            <li className={styles.income__benefitItem}>
-                                8-12 ventas mensuales
+                        <ul className={styles.tierList}>
+                            <li className={styles.tierItem}>
+                                <span className={styles.checkIcon}>✓</span>
+                                Todo lo anterior
                             </li>
-                            <li className={styles.income__benefitItem}>
-                                Premios en productos
+                            <li className={styles.tierItem}>
+                                <span className={styles.checkIcon}>✓</span>
+                                Comisiones por ventas de tu equipo
                             </li>
-                            <li className={styles.income__benefitItem}>
-                                Bonos por performance
+                            <li className={styles.tierItem}>
+                                <span className={styles.checkIcon}>✓</span>
+                                Bonos por liderazgo
                             </li>
                         </ul>
                     </div>
 
-                    <div className={styles.income__tier}>
-                        <div className={styles.income__tierHeader}>
-                            <h3 className={styles.income__tierName}>
-                                Líder de Equipo
-                            </h3>
+                    {/* Tier 3 */}
+                    <div className={styles.tierCard}>
+                        <div className={styles.tierHeader}>
+                            <FontAwesomeIcon icon={faPlaneDeparture} className={styles.tierIcon} />
+                            <h3 className={styles.tierName}>Empresaria Essen</h3>
                         </div>
-                        <ul className={styles.income__benefits}>
-                            <li className={styles.income__benefitItem}>
-                                Ventas + comisiones de equipo
+                        <ul className={styles.tierList}>
+                            <li className={styles.tierItem}>
+                                <span className={styles.checkIcon}>✓</span>
+                                Ingresos residuales ilimitados
                             </li>
-                            <li className={styles.income__benefitItem}>
-                                Viajes y reconocimientos
+                            <li className={styles.tierItem}>
+                                <span className={styles.checkIcon}>✓</span>
+                                Viajes internacionales (All Inclusive)
                             </li>
-                            <li className={styles.income__benefitItem}>
-                                Ingresos residuales
+                            <li className={styles.tierItem}>
+                                <span className={styles.checkIcon}>✓</span>
+                                Reconocimientos exclusivos
                             </li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            {/* Support Section */}
-            <section className={styles.support}>
-                <div className={styles.support__content}>
-                    <h2 className={styles.support__title}>
-                        No emprendas solo: te acompañamos en cada paso
-                    </h2>
-
-                    <div className={styles.support__features}>
-                        <div className={styles.support__feature}>
-                            <div className={styles.support__icon}>🎓</div>
-                            <div className={styles.support__content}>
-                                <h3 className={styles.support__featureTitle}>
-                                    Capacitación 360°
-                                </h3>
-                                <p
-                                    className={
-                                        styles.support__featureDescription
-                                    }
-                                >
-                                    Aprendé técnicas de venta, manejo de redes y
-                                    fidelización de clientes
-                                </p>
+            {/* SUPPORT SECTION */}
+            <section className={styles.supportSection}>
+                <div className={styles.supportContainer}>
+                    <div className={styles.supportContent}>
+                        <h2 className={styles.sectionTitle}>No estás sola: te acompañamos</h2>
+                        <div className={styles.featureList}>
+                            <div className={styles.supportFeature}>
+                                <div className={styles.featureIconWrapper}>
+                                    <FontAwesomeIcon icon={faGraduationCap} />
+                                </div>
+                                <div className={styles.featureText}>
+                                    <h3>Capacitación Gratuita</h3>
+                                    <p>Aprendé todo sobre productos, ventas y redes sociales en nuestra academia online.</p>
+                                </div>
                             </div>
-                        </div>
-
-                        <div className={styles.support__feature}>
-                            <div className={styles.support__icon}>🤝</div>
-                            <div className={styles.support__content}>
-                                <h3 className={styles.support__featureTitle}>
-                                    Mentoría personal
-                                </h3>
-                                <p
-                                    className={
-                                        styles.support__featureDescription
-                                    }
-                                >
-                                    Tu líder te guía semana a semana para
-                                    alcanzar tus objetivos
-                                </p>
+                            <div className={styles.supportFeature}>
+                                <div className={styles.featureIconWrapper}>
+                                    <FontAwesomeIcon icon={faHandshake} />
+                                </div>
+                                <div className={styles.featureText}>
+                                    <h3>Mentoría 1 a 1</h3>
+                                    <p>Tendrás una guía (patrocinadora) que te ayudará paso a paso en tus inicios.</p>
+                                </div>
                             </div>
-                        </div>
-
-                        <div className={styles.support__feature}>
-                            <div className={styles.support__icon}>💬</div>
-                            <div className={styles.support__content}>
-                                <h3 className={styles.support__featureTitle}>
-                                    Comunidad activa
-                                </h3>
-                                <p
-                                    className={
-                                        styles.support__featureDescription
-                                    }
-                                >
-                                    Grupo privado donde compartimos éxitos y
-                                    resolvemos dudas
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className={styles.support__feature}>
-                            <div className={styles.support__icon}>🎁</div>
-                            <div className={styles.support__content}>
-                                <h3 className={styles.support__featureTitle}>
-                                    Reconocimientos
-                                </h3>
-                                <p
-                                    className={
-                                        styles.support__featureDescription
-                                    }
-                                >
-                                    Celebramos tus logros con premios, viajes y
-                                    eventos exclusivos
-                                </p>
+                            <div className={styles.supportFeature}>
+                                <div className={styles.featureIconWrapper}>
+                                    <FontAwesomeIcon icon={faComments} />
+                                </div>
+                                <div className={styles.featureText}>
+                                    <h3>Comunidad Activa</h3>
+                                    <p>Sumate a grupos de WhatsApp donde compartimos estrategias y celebramos logros.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className={styles.support__image}>
-                    {/* Imagen: Grupo de emprendedores sonrientes en capacitación o evento */}
-                </div>
-            </section>
-
-            {/* FAQ Section */}
-            <section className={styles.faq}>
-                <h2 className={styles.faq__title}>¿Todavía tenés dudas?</h2>
-
-                <div className={styles.faq__grid}>
-                    <div className={styles.faq__item}>
-                        <h3 className={styles.faq__question}>
-                            ¿Realmente no necesito invertir?
-                        </h3>
-                        <p className={styles.faq__answer}>
-                            Exacto. Comenzás sin poner un peso. Solo necesitás
-                            tu celular y conexión a internet.
-                        </p>
-                    </div>
-
-                    <div className={styles.faq__item}>
-                        <h3 className={styles.faq__question}>
-                            ¿Y si no tengo experiencia en ventas?
-                        </h3>
-                        <p className={styles.faq__answer}>
-                            El 80% de nuestros emprendedores empezó sin
-                            experiencia. Te capacitamos en todo.
-                        </p>
-                    </div>
-
-                    <div className={styles.faq__item}>
-                        <h3 className={styles.faq__question}>
-                            ¿Cuánto tiempo necesito dedicar?
-                        </h3>
-                        <p className={styles.faq__answer}>
-                            Desde 1 hora por día. Vos manejás tus tiempos y
-                            crecés a tu ritmo.
-                        </p>
-                    </div>
-
-                    <div className={styles.faq__item}>
-                        <h3 className={styles.faq__question}>
-                            ¿Qué pasa con el monotributo?
-                        </h3>
-                        <p className={styles.faq__answer}>
-                            Te asesoramos gratis con un contador. Es un trámite
-                            simple que hacés online.
-                        </p>
+                    <div className={styles.supportImage}>
+                        <div className={styles.supportImgPlaceholder}>
+                            <Image src="/images/join/support.jpg" alt="Comunidad activa" fill className={styles.imgCover} />
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Final CTA Section */}
+            {/* FINAL CTA */}
             <section className={styles.finalCta}>
-                <div className={styles.finalCta__content}>
-                    <h2 className={styles.finalCta__title}>
-                        Tu momento es ahora
-                    </h2>
-                    <p className={styles.finalCta__text}>
-                        El universo está esperando que des ese paso que te
-                        falta. ¿Qué estás esperando para cambiar tu vida?
+                <div className={styles.finalCtaContent}>
+                    <h2 className={styles.finalCtaTitle}>¿Estás lista para dar el salto?</h2>
+                    <p className={styles.finalCtaText}>
+                        El "momento perfecto" no existe, pero este puede ser el comienzo de algo increíble.
+                        Animate a escuchar la propuesta completa.
                     </p>
-                    <p className={styles.finalCta__challenge}>
-                        <strong>
-                            Animate a escuchar la propuesta completa.
-                        </strong>
-                        Sin compromiso, sin presión. Solo una conversación que
-                        puede cambiar todo.
-                    </p>
+
                     <TrackedLink href={ROUTES.WHATSAPP}>
-                        <button className={styles.finalCta__button}>
-                            Quiero mi charla informativa
+                        <button className={styles.finalCtaButton}>
+                            <FontAwesomeIcon icon={faWhatsapp} size="lg" />
+                            Quiero agendar mi charla
                         </button>
                     </TrackedLink>
-                    <div className={styles.finalCta__benefits}>
-                        <span>15 minutos de tu tiempo</span>
+
+                    <div className={styles.finalBenefits}>
+                        <span><FontAwesomeIcon icon={faClock} /> 15 minutos</span>
                         <span>•</span>
                         <span>Sin compromiso</span>
                         <span>•</span>
-                        <span>100% gratuito</span>
+                        <span>100% Gratuito</span>
                     </div>
-                </div>
-                <div className={styles.finalCta__image}>
-                    {/* Imagen: Persona alcanzando meta o símbolo de éxito */}
                 </div>
             </section>
         </div>
