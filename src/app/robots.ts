@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { NEXT_PUBLIC_BASE_URL } from '@/src/lib/constants'
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = NEXT_PUBLIC_BASE_URL || 'https://ollasessen.com.ar'
+    const baseUrl = NEXT_PUBLIC_BASE_URL || 'https://recetasconessen.com'
 
     return {
         rules: [

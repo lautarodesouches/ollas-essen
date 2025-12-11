@@ -21,8 +21,10 @@ interface Props {
     params: Promise<{ slug: string }>
 }
 
+// Performance Optimizations
 export const dynamic = 'force-static'
 export const revalidate = 3600
+export const dynamicParams = true // Allow on-demand ISR for new products
 
 export async function generateStaticParams() {
     const products = await getProducts()
@@ -67,7 +69,10 @@ export default async function Product({ params }: Props) {
             <article className={styles.product}>
                 {/* Left: Gallery */}
                 <div className={styles.product__gallery_col}>
-                    <ProductGallery images={product.imagenes} />
+                    <ProductGallery
+                        images={product.imagenes}
+                        productName={`${capitalize(product.linea)} ${capitalize(product.nombre)}`}
+                    />
                 </div>
 
                 {/* Right: Info & Actions */}

@@ -6,9 +6,10 @@ import styles from './page.module.css'
 
 interface Props {
     images: string[]
+    productName: string
 }
 
-export default function ProductGallery({ images }: Props) {
+export default function ProductGallery({ images, productName }: Props) {
     const [activeIndex, setActiveIndex] = useState(0)
 
     // Mobile Scroll State
@@ -53,11 +54,13 @@ export default function ProductGallery({ images }: Props) {
                     <div key={`mob-${i}`} className={styles.snapItem}>
                         <Image
                             src={`/images/products/${src}`}
-                            alt={`Vista ${i + 1}`}
+                            alt={`${productName} - Vista ${i + 1}`}
                             width={600}
                             height={600}
                             className={styles.mobileImage}
                             priority={i === 0}
+                            loading={i === 0 ? "eager" : "lazy"}
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
                 ))}
@@ -85,11 +88,12 @@ export default function ProductGallery({ images }: Props) {
                     <div className={styles.zoomContainer}>
                         <Image
                             src={`/images/products/${images[activeIndex]}`}
-                            alt="Vista Principal"
+                            alt={`${productName} - Vista Principal`}
                             fill
                             className={styles.desktopImage}
                             priority
-                            sizes="(max-width: 1200px) 50vw, 800px"
+                            loading="eager"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
                 </div>
@@ -106,7 +110,7 @@ export default function ProductGallery({ images }: Props) {
                             >
                                 <Image
                                     src={`/images/products/${src}`}
-                                    alt={`Miniatura ${i + 1}`}
+                                    alt={`${productName} - Miniatura ${i + 1}`}
                                     fill
                                     className={styles.thumbImg}
                                     sizes="100px"
