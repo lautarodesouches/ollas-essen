@@ -15,7 +15,7 @@ export default function ProductBenefits() {
                     <FontAwesomeIcon icon={faFire} className={styles.icon} />
                 </div>
                 <div className={styles.content}>
-                    <h4 className={styles.title}>Efecto Horno</h4>
+                    <h3 className={styles.title}>Efecto Horno</h3>
                     <p className={styles.text}>Cociná tortas y carnes en la hornalla.</p>
                 </div>
             </div>
@@ -25,7 +25,7 @@ export default function ProductBenefits() {
                     <FontAwesomeIcon icon={faPiggyBank} className={styles.icon} />
                 </div>
                 <div className={styles.content}>
-                    <h4 className={styles.title}>Ahorro Real</h4>
+                    <h3 className={styles.title}>Ahorro Real</h3>
                     <p className={styles.text}>Ahorrá hasta un 70% de gas al mes.</p>
                 </div>
             </div>
@@ -35,7 +35,7 @@ export default function ProductBenefits() {
                     <FontAwesomeIcon icon={faClock} className={styles.icon} />
                 </div>
                 <div className={styles.content}>
-                    <h4 className={styles.title}>Tiempo Libre</h4>
+                    <h3 className={styles.title}>Tiempo Libre</h3>
                     <p className={styles.text}>Cocciones rápidas, más tiempo para vos.</p>
                 </div>
             </div>
@@ -45,7 +45,7 @@ export default function ProductBenefits() {
                     <FontAwesomeIcon icon={faWandMagicSparkles} className={styles.icon} />
                 </div>
                 <div className={styles.content}>
-                    <h4 className={styles.title}>Limpieza Mágica</h4>
+                    <h3 className={styles.title}>Limpieza Mágica</h3>
                     <p className={styles.text}>Antiadherente premium, un trapo y listo.</p>
                 </div>
             </div>

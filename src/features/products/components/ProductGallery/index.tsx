@@ -60,6 +60,7 @@ export default function ProductGallery({ images, productName }: Props) {
                             className={styles.mobileImage}
                             priority={i === 0}
                             loading={i === 0 ? "eager" : "lazy"}
+                            {...(i === 0 ? { fetchPriority: "high" } : {})}
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
@@ -93,6 +94,7 @@ export default function ProductGallery({ images, productName }: Props) {
                             className={styles.desktopImage}
                             priority
                             loading="eager"
+                            fetchPriority="high"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
