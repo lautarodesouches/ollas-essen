@@ -28,6 +28,7 @@ export default function RootLayout({
                 <link rel="icon" href="/images/favicon.ico" sizes="any" />
                 <link rel="preconnect" href="https://www.googletagmanager.com" />
                 <link rel="preconnect" href="https://www.google-analytics.com" />
+                <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
             </head>
             <body className={`${poppins.className}`}>
                 <Header />

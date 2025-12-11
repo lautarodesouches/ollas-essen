@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import nextDynamic from 'next/dynamic'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCreditCard, faUsers, faExpand } from '@fortawesome/free-solid-svg-icons'
 import { faCcVisa, faCcMastercard, faCcAmex } from '@fortawesome/free-brands-svg-icons'
@@ -8,18 +9,26 @@ import { capitalize, generateSlug, getProductBySlug, getProducts } from '@/src/f
 import { ROUTES } from '@/src/config/routes'
 import { WHATSAPP__NUMBER } from '@/src/lib/constants'
 
-// Components
+// Above the fold - preload critical
 import ProductFaqs from '@/src/features/products/components/ProductFaqs'
 import ProductGallery from '@/src/features/products/components/ProductGallery'
-import ProductRecommended from '@/src/features/products/components/ProductRecommended'
 import TrackedLink from '@/src/features/tracking/components/TrackedLink'
 
 import styles from './page.module.css'
 
-// Wireframe Components
-import ProductBenefits from '@/src/features/products/components/ProductBenefits'
-import ProductEmotional from '@/src/features/products/components/ProductEmotional'
-import ProductTechnical from '@/src/features/products/components/ProductTechnical'
+// Below the fold - lazy load
+const ProductBenefits = nextDynamic(() => import('@/src/features/products/components/ProductBenefits'), {
+    ssr: true,
+})
+const ProductEmotional = nextDynamic(() => import('@/src/features/products/components/ProductEmotional'), {
+    ssr: true,
+})
+const ProductTechnical = nextDynamic(() => import('@/src/features/products/components/ProductTechnical'), {
+    ssr: true,
+})
+const ProductRecommended = nextDynamic(() => import('@/src/features/products/components/ProductRecommended'), {
+    ssr: true,
+})
 
 interface Props {
     params: Promise<{ slug: string }>
