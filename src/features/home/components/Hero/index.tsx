@@ -12,7 +12,7 @@ export default function Hero() {
                 fill
                 className={styles.startImage}
                 priority
-                quality={85}
+                quality={80}
                 sizes="100vw"
             />
             <div className={styles.startOverlay} />
