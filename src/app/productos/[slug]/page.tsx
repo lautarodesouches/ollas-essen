@@ -158,7 +158,6 @@ export default async function Product({ params }: Props) {
             />
 
             {/* BLOCK 4: TECHNICAL */}
-            {/* BLOCK 4: TECHNICAL */}
             <ProductTechnical images={product.imagenes} />
 
             <div className={styles.separator} />
