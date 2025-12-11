@@ -1,11 +1,9 @@
-import { Suspense } from 'react'
 import styles from './page.module.css'
 import { getLines, getRandomProducts } from '@/src/features/products/utils'
 import ProductList from '@/src/features/products/components/ProductList'
 import Hero from '@/src/features/home/components/Hero'
 import Categories from '@/src/features/home/components/Categories'
 import WhyChooseEssen from '@/src/features/home/components/WhyChooseEssen'
-import CampaignTracker from './CampaignTracker'
 
 // Forzar renderizado estático
 export const dynamic = 'force-static'
@@ -20,9 +18,6 @@ export default async function Home() {
 
     return (
         <>
-            <Suspense fallback={null}>
-                <CampaignTracker />
-            </Suspense>
             <Hero />
             <Categories lines={lines} />
             <section className={styles.products}>

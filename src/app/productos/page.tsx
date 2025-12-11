@@ -3,7 +3,6 @@ import ProductFilter from '@/src/features/products/components/ProductFilter'
 import { Product } from '@/src/features/products/types'
 import { getLines, getProducts, getServings } from '@/src/features/products/utils'
 import styles from './page.module.css'
-import { Suspense } from 'react'
 
 interface Props {
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>

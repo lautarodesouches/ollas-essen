@@ -7,8 +7,6 @@ import { ROUTES } from '@/src/config/routes'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react'
 
-import TrackedLink from '@/src/features/tracking/components/TrackedLink'
-
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
 
@@ -63,18 +61,18 @@ export default function Header() {
                 </nav>
 
                 <div className={styles.icons}>
-                    <Link href={ROUTES.INSTAGRAM} target="_blank" aria-label="Instagram">
+                    <a href={ROUTES.INSTAGRAM} target="_blank" aria-label="Instagram">
                         <FontAwesomeIcon
                             icon={faInstagram}
                             className={styles.icon}
                         />
-                    </Link>
-                    <TrackedLink href={ROUTES.WHATSAPP} target="_blank" aria-label="WhatsApp">
+                    </a>
+                    <a href={ROUTES.WHATSAPP} target="_blank" aria-label="WhatsApp">
                         <FontAwesomeIcon
                             icon={faWhatsapp}
                             className={styles.icon}
                         />
-                    </TrackedLink>
+                    </a>
                 </div>
             </div>
         </header>

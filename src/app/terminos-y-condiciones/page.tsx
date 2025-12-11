@@ -1,4 +1,5 @@
 import styles from './page.module.css'
+import { NEXT_PUBLIC_BASE_URL } from '@/src/lib/constants'
 
 export default function TermsAndConditions() {
     return (
@@ -13,7 +14,7 @@ export default function TermsAndConditions() {
             <h2>1. Aceptación de los Términos</h2>
             <p>
                 Al acceder y utilizar el sitio web{' '}
-                <strong>https://recetasconessen.com/</strong> (en adelante, "el
+                <strong>{NEXT_PUBLIC_BASE_URL}</strong> (en adelante, "el
                 Sitio"), usted acepta cumplir con estos Términos y Condiciones y
                 con todas las leyes y regulaciones aplicables en la República
                 Argentina.

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from '@/src/app/page.module.css'
+import styles from './page.module.css'
 import { ROUTES } from '@/src/config/routes'
 
 export default function Hero() {

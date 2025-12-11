@@ -1,4 +1,5 @@
 import styles from './page.module.css'
+import { NEXT_PUBLIC_BASE_URL } from '@/src/lib/constants'
 
 export default function PrivacyPolicy() {
     return (
@@ -14,7 +15,7 @@ export default function PrivacyPolicy() {
                     </h2>
                     <p>
                         El sitio web{' '}
-                        <strong>https://recetasconessen.com/</strong> (en
+                        <strong>{NEXT_PUBLIC_BASE_URL}</strong> (en
                         adelante, "el Sitio") es operado por{' '}
                         <strong>Recetas con Essen</strong>.
                     </p>

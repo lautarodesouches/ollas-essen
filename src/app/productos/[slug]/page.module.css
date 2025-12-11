@@ -247,15 +247,6 @@
         padding-bottom: 100px; /* Prevent footer overlap */
     }
 
-    /* Hide normal buttons on mobile if using the bar? 
-       User said: "Mobile Version - Fixed Bottom Bar". 
-       Usually this REPLACES the inline buttons or complements them. 
-       If I hide the inline buttons, the user can't click them until they scroll? 
-       No, "Fixed Bottom Bar" > "Siempre Visible".
-       I will KEEP the static buttons in the flow (for flow reading) 
-       BUT enable the Fixed Bar as requested. 
-    */
-
     .mobileStickyBar {
         display: flex;
         align-items: center;

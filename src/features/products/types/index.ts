@@ -1,4 +1,4 @@
-export interface Product {
+export type Product = {
     linea: string
     nombre: string
     codigo: number
@@ -6,7 +6,7 @@ export interface Product {
     capacidad?: number
     comensales?: number
     imagenes: string[]
-    titulo_venta?: string
-    descripcion?: string
-    videos?: string[]
+    titulo_venta: string
+    descripcion: string
+    videos: string[]
 }

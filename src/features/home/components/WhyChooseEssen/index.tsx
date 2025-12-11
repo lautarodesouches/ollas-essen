@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from '@/src/app/page.module.css'
+import styles from './page.module.css'
 import { faUtensils, faShieldAlt, faTruck } from '@fortawesome/free-solid-svg-icons'
 
 const WHY_CHOOSE_ESSEN = [

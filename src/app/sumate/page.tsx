@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import { ROUTES } from '@/src/config/routes'
+import { WHATSAPP__NUMBER } from '@/src/lib/constants'
 import TrackedLink from '@/src/features/tracking/components/TrackedLink'
 
 // Import de Iconos
@@ -51,7 +51,10 @@ export default function Emprender() {
                     </div>
 
                     <div className={styles.heroCtaContainer}>
-                        <TrackedLink href={ROUTES.WHATSAPP}>
+                        <TrackedLink
+                            href={`https://wa.me/${WHATSAPP__NUMBER}?text=Hola! Quisiera más información sobre cómo emprender en Essen.`}
+                            target="_blank"
+                        >
                             <button className={styles.primaryButton}>
                                 <FontAwesomeIcon icon={faWhatsapp} size="lg" />
                                 Quiero mi independencia
@@ -225,7 +228,10 @@ export default function Emprender() {
                         Animate a escuchar la propuesta completa.
                     </p>
 
-                    <TrackedLink href={ROUTES.WHATSAPP}>
+                    <TrackedLink
+                        href={`https://wa.me/${WHATSAPP__NUMBER}?text=Hola! Estoy lista para dar el salto y emprender.`}
+                        target="_blank"
+                    >
                         <button className={styles.finalCtaButton}>
                             <FontAwesomeIcon icon={faWhatsapp} size="lg" />
                             Quiero agendar mi charla

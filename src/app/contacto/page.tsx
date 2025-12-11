@@ -1,10 +1,9 @@
 'use client'
 import { WHATSAPP__NUMBER } from '@/src/lib/constants'
 import styles from './page.module.css'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ROUTES } from '@/src/config/routes'
 import TrackedLink from '@/src/features/tracking/components/TrackedLink'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 export default function ContactPage() {
     const whatsappMessage = encodeURIComponent(
@@ -41,7 +40,8 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className={styles.whatsappButton}
                 >
-                    💬 Contactar por WhatsApp
+                    <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
+                    Contactar por WhatsApp
                 </TrackedLink>
             </section>
         </main>

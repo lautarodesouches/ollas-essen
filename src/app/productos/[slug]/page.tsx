@@ -1,16 +1,20 @@
 import { notFound } from 'next/navigation'
-import { capitalize, generateSlug, getProductBySlug, getProducts } from '@/src/features/products/utils'
-import styles from './page.module.css'
 import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCreditCard, faUsers, faExpand } from '@fortawesome/free-solid-svg-icons'
+import { faCcVisa, faCcMastercard, faCcAmex } from '@fortawesome/free-brands-svg-icons'
+
+import { capitalize, generateSlug, getProductBySlug, getProducts } from '@/src/features/products/utils'
 import { ROUTES } from '@/src/config/routes'
+import { WHATSAPP__NUMBER } from '@/src/lib/constants'
+
+// Components
 import ProductFaqs from '@/src/features/products/components/ProductFaqs'
 import ProductGallery from '@/src/features/products/components/ProductGallery'
 import ProductRecommended from '@/src/features/products/components/ProductRecommended'
 import TrackedLink from '@/src/features/tracking/components/TrackedLink'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCreditCard, faUsers, faExpand } from '@fortawesome/free-solid-svg-icons'
-import { faCcVisa, faCcMastercard, faCcAmex } from '@fortawesome/free-brands-svg-icons'
-import { WHATSAPP__NUMBER } from '@/src/lib/constants'
+
+import styles from './page.module.css'
 
 // Wireframe Components
 import ProductBenefits from '@/src/features/products/components/ProductBenefits'

@@ -1,7 +1,7 @@
 import { WHATSAPP__NUMBER } from '@/src/lib/constants';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
-export async function GET(req: NextRequest) {
+export async function GET() {
     const whatsappUrl = `https://wa.me/${WHATSAPP__NUMBER}`;
     return NextResponse.redirect(whatsappUrl, 302);
 }
