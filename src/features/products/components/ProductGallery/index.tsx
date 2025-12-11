@@ -61,7 +61,8 @@ export default function ProductGallery({ images, productName }: Props) {
                             priority={i === 0}
                             loading={i === 0 ? "eager" : "lazy"}
                             {...(i === 0 ? { fetchPriority: "high" } : {})}
-                            sizes="(max-width: 768px) 100vw, 50vw"
+                            sizes="100vw"
+                            quality={i === 0 ? 75 : 70}
                         />
                     </div>
                 ))}
@@ -95,7 +96,8 @@ export default function ProductGallery({ images, productName }: Props) {
                             priority
                             loading="eager"
                             fetchPriority="high"
-                            sizes="(max-width: 768px) 100vw, 50vw"
+                            sizes="600px"
+                            quality={75}
                         />
                     </div>
                 </div>
@@ -115,7 +117,8 @@ export default function ProductGallery({ images, productName }: Props) {
                                     alt={`${productName} - Miniatura ${i + 1}`}
                                     fill
                                     className={styles.thumbImg}
-                                    sizes="100px"
+                                    sizes="150px"
+                                    quality={70}
                                 />
                             </button>
                         ))}

@@ -62,6 +62,9 @@ export default function ProductEmotional({ descripcion, comensales, videos = [],
                             width={500}
                             height={500}
                             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
+                            loading="lazy"
+                            sizes="(max-width: 768px) 100vw, 500px"
+                            quality={75}
                         />
                     ) : (
                         // Fallback

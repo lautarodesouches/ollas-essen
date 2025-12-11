@@ -24,6 +24,9 @@ export default function ProductTechnical({ images = [] }: Props) {
                                 width={150}
                                 height={150}
                                 className={styles.img}
+                                loading="lazy"
+                                sizes="150px"
+                                quality={70}
                             />
                         ) : (
                             <FontAwesomeIcon icon={faHandHolding} />
@@ -42,6 +45,9 @@ export default function ProductTechnical({ images = [] }: Props) {
                                 width={150}
                                 height={150}
                                 className={styles.img}
+                                loading="lazy"
+                                sizes="150px"
+                                quality={70}
                             />
                         ) : (
                             <FontAwesomeIcon icon={faLock} />
@@ -60,6 +66,9 @@ export default function ProductTechnical({ images = [] }: Props) {
                                 width={150}
                                 height={150}
                                 className={styles.img}
+                                loading="lazy"
+                                sizes="150px"
+                                quality={70}
                             />
                         ) : (
                             <FontAwesomeIcon icon={faLayerGroup} />
