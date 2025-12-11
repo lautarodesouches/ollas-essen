@@ -1,16 +1,21 @@
 .section {
-    padding: 20px;
-    background: #e9e9e9;
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .section__title {
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: var(--black, #333);
+    position: relative;
+    padding-left: 1rem;
+    border-left: 4px solid var(--primary, #FF6B00);
 }
 
-.section > div {
-    padding: 0 10%;
-    margin: auto;
+/* We reuse ProductList but style the wrapper */
+.gridWrapper {
+    /* If ProductList uses grid, this might just be a container */
 }

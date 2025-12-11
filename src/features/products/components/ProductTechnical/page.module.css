@@ -1,0 +1,70 @@
+.technical {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 3rem;
+    font-family: var(--font-secondary); /* If defined, else generic */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imagePlaceholder {
+    width: 80px;
+    height: 80px;
+    background-color: #fcebd1; /* Light Orange/Beige background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: var(--primary, #FF6B00);
+    overflow: hidden; /* Ensure image doesn't overflow rounded corners */
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Image specific style */
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item:hover .imagePlaceholder {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: var(--primary, #FF6B00);
+}
+
+.itemTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.itemText {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    max-width: 250px;
+    margin: 0 auto;
+}

@@ -6,7 +6,7 @@ import TrackedLink from '@/src/features/tracking/components/TrackedLink'
 
 export default function Whatsapp() {
     return (
-        <aside className={styles.whatsapp}>
+        <aside className={styles.whatsapp} id="global-whatsapp-btn">
             <TrackedLink
                 href={ROUTES.WHATSAPP}
                 target="_blank"

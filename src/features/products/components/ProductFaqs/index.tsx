@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import styles from './page.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 interface Faq {
     question: string
@@ -69,18 +69,16 @@ export default function Faqs() {
                         >
                             <span>{faq.question}</span>
                             <span
-                                className={`${styles.icon} ${
-                                    openIndex === index ? styles.rotate : ''
-                                }`}
+                                className={`${styles.icon} ${openIndex === index ? styles.rotate : ''
+                                    }`}
                             >
-                                <FontAwesomeIcon icon={faArrowDown} />
+                                <FontAwesomeIcon icon={faPlus} />
                             </span>
                         </button>
 
                         <div
-                            className={`${styles.answer} ${
-                                openIndex === index ? styles.open : ''
-                            }`}
+                            className={`${styles.answer} ${openIndex === index ? styles.open : ''
+                                }`}
                         >
                             <p>{faq.answer}</p>
                         </div>

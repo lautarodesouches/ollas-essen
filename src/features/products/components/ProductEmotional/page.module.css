@@ -1,0 +1,49 @@
+.emotional {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 0;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .emotional {
+        flex-direction: row;
+        gap: 4rem;
+    }
+}
+
+.textSide {
+    flex: 1;
+}
+
+.title {
+    font-size: 2rem;
+    color: var(--black, #333);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: var(--primary, #FF6B00);
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark-grey, #555);
+}
+
+.imageSide {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.image {
+    object-fit: cover;
+}

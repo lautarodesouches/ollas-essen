@@ -1,73 +1,93 @@
 .container {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    margin: 4rem auto 1rem auto; /* Reduced bottom margin */
+    padding: 0 1.5rem;
 }
 
 .title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
     text-align: center;
+    color: #111;
 }
 
 .list {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
 }
 
 .item {
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    background-color: #fff;
+    border-bottom: 1px solid #eee;
     overflow: hidden;
-    transition: box-shadow 0.3s ease;
 }
 
-.item:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+.item:first-child {
+    border-top: 1px solid #eee;
 }
 
 .question {
     width: 100%;
     background: none;
     border: none;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1.5rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     text-align: left;
-    font-weight: 1rem;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.question:hover {
+    color: var(--primary, #FF6B00);
 }
 
 .icon {
-    font-size: 0.9rem;
-    transition: transform 0.3s ease;
+    font-size: 1rem;
+    color: #999;
+    transition: transform 0.3s ease, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f9f9f9;
 }
 
 .rotate {
+    transform: rotate(45deg); /* For + to x icon if using plus */
+    background: var(--primary, #FF6B00);
+    color: white;
+}
+
+/* If using chevron (rotate 180) */
+.chevronRotate {
     transform: rotate(180deg);
+    color: var(--primary, #FF6B00);
+    background: #FFF3E0;
 }
 
 .answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
-    padding: 0 1rem;
-    font-size: 0.9rem;
+    transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s;
+    opacity: 0;
 }
 
 .open {
-    max-height: 500px; /* suficiente para mostrar texto largo */
-    padding-bottom: 1rem;
+    max-height: 500px;
+    opacity: 1;
+    padding-bottom: 1.5rem;
 }
 
 .answer p {
-    margin: 0.5rem 0 0;
-    color: var(--dark);
-    line-height: 1.5;
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+    font-size: 1rem;
 }

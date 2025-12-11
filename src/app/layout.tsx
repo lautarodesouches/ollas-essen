@@ -3,7 +3,6 @@ import { Poppins } from 'next/font/google'
 import './globals.css'
 import Header from '@/src/layouts/Header'
 import Footer from '@/src/layouts/Footer'
-import Whatsapp from '@/src/layouts/Whatsapp'
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import { NEXT_PUBLIC_GA_ADS_ID } from '../lib/constants'
 
@@ -32,7 +31,6 @@ export default function RootLayout({
                 <Header />
                 <main>{children}</main>
                 <Footer />
-                <Whatsapp />
             </body>
             <GoogleTagManager gtmId="GTM-N444Q5QS" />
             <GoogleAnalytics gaId={NEXT_PUBLIC_GA_ADS_ID} />

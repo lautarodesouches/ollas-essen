@@ -1,160 +1,303 @@
+/* Main Containers */
 .container {
-    background: var(--light);
-    padding: 20px;
-    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: white;
 }
 
+/* Breadcrumbs/Nav */
 .nav {
     display: flex;
-    flex-direction: row;
-    gap: 2.5px;
-}
-
-.nav__span {
-    font-weight: 300;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: var(--dark-grey, #666);
 }
 
 .nav__link {
-    color: var(--dark);
-    font-size: 0.9rem;
-    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
     text-transform: capitalize;
-    font-weight: 300;
 }
 
+.nav__link:hover {
+    color: var(--primary, #FF6B00);
+}
+
+.nav__span {
+    color: #ccc;
+}
+
+/* Hero Section (Grid) */
 .product {
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 900px) {
+    .product {
+        grid-template-columns: 0.8fr 1.2fr; /* Image smaller (40%), Info larger (60%) */
+        gap: 4rem;
+        align-items: start;
+    }
+}
+
+/* Right Column (Info) */
+.product__info_col {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
+    position: relative;
 }
 
-.product__subtitle {
-    font-size: 1.6rem;
-    font-weight: 300;
-    color: var(--dark);
+@media (min-width: 900px) {
+    .product__info_col {
+        position: sticky;
+        top: 20px;
+    }
+}
+
+/* Typography */
+.technicalName {
+    font-size: 1.1rem;
+    color: var(--dark-grey, #666);
+    font-weight: 500;
+    margin: 0;
     text-transform: capitalize;
+    letter-spacing: 0.5px;
 }
 
-.product__title {
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--black);
-    text-transform: capitalize;
+.salesTitle {
+    font-size: 2.2rem;
+    color: var(--black, #222);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0.2rem 0;
 }
 
-.producto__code {
-    font-size: 0.9rem;
+.sku {
+    font-size: 0.85rem;
+    color: #999;
     font-weight: 300;
-    color: var(--dark);
 }
 
-.product__info {
-    margin-top: 2rem;
+/* Specs Row */
+.specs {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0; /* Removing bottom margin completely */
+}
+
+.specItem {
+    display: inline-flex;
     align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem; /* Slightly smaller padding */
+    background-color: #F3F4F6; /* Very Light Gray */
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #4B5563; /* Neutral Gray Text */
+    border: 1px solid transparent;
+    transition: all 0.2s;
 }
 
-.product__info div {
-    text-align: center;
+.specItem:hover {
+    background-color: #E5E7EB;
+    color: #111;
 }
 
-.product__info p {
-    font-size: 1rem;
-    color: var(--dark);
+.specIcon {
+    color: #6B7280; /* Neutral Icon Color to match gray theme */
+    font-size: 0.9rem;
 }
 
+/* Price & Financing Block */
+.priceBlock {
+    background: #FFF8E1;
+    border: 1px solid #FFECB3;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 0.8rem; /* Reduced from 1rem */
+}
+
+.financingTitle {
+    color: var(--primary, #FF6B00);
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.paymentMethods {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    color: var(--dark-grey, #555);
+    margin-top: 0.5rem;
+}
+
+/* CTA Buttons */
 .buttons {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-    gap: 20px;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.buttons__primary {
-    background: var(--primary);
-    color: var(--white);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.5s ease;
-}
-
-.buttons__primary:hover {
-    background: var(--grey);
-}
-
-.buttons__secondary {
-    background: var(--white);
-    color: var(--primary);
-    padding: 10px 20px;
-    border: 1px solid var(--primary);
-    border-radius: 10px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.5s ease;
-}
-
-.buttons__secondary:hover {
-    background: var(--primary);
-    color: var(--white);
-}
-
-.methods {
+.primaryBtn {
+    background-color: var(--primary, #FF6B00);
+    color: white;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 50px;
     text-align: center;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.25);
+    width: 100%;
 }
 
-.methods__title {
-    color: var(--black);
-    font-size: 1rem;
-    font-weight: 400;
+@media (min-width: 900px) {
+    .primaryBtn {
+        width: auto;
+        min-width: 250px; /* Reasonable minimum size */
+        padding: 0.8rem 2rem;
+    }
 }
 
-.methods__list {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
+.primaryBtn:hover {
+    background-color: #E65100;
+    transform: translateY(-2px);
 }
 
-.methods__icon {
-    width: 30px;
-    height: 30px;
-    color: var(--primary);
+.secondaryBtn {
+    background-color: transparent;
+    color: var(--primary, #FF6B00);
+    border: 2px solid var(--primary, #FF6B00);
+    font-weight: 600;
+    padding: 0.8rem;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
 }
 
-.method__link {
-    width: fit-content;
-    margin: auto;
-    color: var(--black);
-    text-decoration: underline;
-}
-
-@media (min-width: 768px) {
-    .product {
+@media (min-width: 900px) {
+    .buttons {
         flex-direction: row;
+        width: 100%;
+    }
+    
+    .secondaryBtn {
+        width: auto;
+        min-width: 200px;
+    }
+}
+
+.secondaryBtn:hover {
+    background-color: #FFF3E0;
+}
+
+/* Description Text */
+.description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Separators */
+.separator {
+    width: 100%;
+    max-width: 90%;
+    height: 1px;
+    background-color: #eee;
+    margin: 4rem auto; /* More generous spacing */
+    border: none;
+}
+
+/* Desktop Sticky Sidebar (Strict Requirement) */
+@media (min-width: 900px) {
+    .product__info_col {
+        position: sticky;
+        top: 2rem;
+        align-self: start;
+        height: auto;
+    }
+}
+
+/* Mobile Fixed Bottom Bar */
+.mobileStickyBar {
+    display: none; /* Hidden on desktop */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-bottom: 100px; /* Prevent footer overlap */
     }
 
-    .product div {
-        flex: 1;
+    /* Hide normal buttons on mobile if using the bar? 
+       User said: "Mobile Version - Fixed Bottom Bar". 
+       Usually this REPLACES the inline buttons or complements them. 
+       If I hide the inline buttons, the user can't click them until they scroll? 
+       No, "Fixed Bottom Bar" > "Siempre Visible".
+       I will KEEP the static buttons in the flow (for flow reading) 
+       BUT enable the Fixed Bar as requested. 
+    */
+
+    .mobileStickyBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 0.8rem 1rem;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        z-index: 1000;
+        gap: 1rem;
     }
 
-    .product__info p {
-        font-size: 1.2rem;
-        color: var(--dark);
+    .stickyPrice {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+
+    .stickyPriceLabel {
+        font-size: 0.75rem;
+        color: #666;
+    }
+
+    .stickyPriceValue {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .stickyBtn {
+        background-color: var(--primary, #FF6B00);
+        color: white;
+        font-weight: 700;
+        padding: 0.8rem 1.5rem;
+        border-radius: 50px;
+        text-align: center;
+        text-decoration: none;
+        flex: 1; /* Button takes remaining space */
+        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
+        font-size: 0.9rem;
     }
 }

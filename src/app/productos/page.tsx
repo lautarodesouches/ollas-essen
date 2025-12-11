@@ -34,13 +34,11 @@ export default async function Products({ searchParams }: Props) {
 
     return (
         <div className={styles.container}>
-            <Suspense fallback={<div>Cargando filtros...</div>}>
-                <ProductFilter
-                    currentFilters={{ linea, comensales, medida, nombre }}
-                    lines={lines}
-                    servings={servings}
-                />
-            </Suspense>
+            <ProductFilter
+                currentFilters={{ linea, comensales, medida, nombre }}
+                lines={lines}
+                servings={servings}
+            />
             <ProductList products={filtered} />
         </div>
     )
