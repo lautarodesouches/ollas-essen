@@ -8,7 +8,7 @@ LOG_FILE=$(mktemp)
 
 # --- CONFIGURACION ---
 # Nombre del servicio en systemd
-SERVICE_NAME="RecetasConEssen" 
+SERVICE_NAME="recetasconessen" 
 # Directorio del proyecto (asegurate que sea correcto)
 PROJECT_DIR="/home/user/next/recetasconessen"
 
