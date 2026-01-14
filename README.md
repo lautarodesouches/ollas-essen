@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Recetas con Essen 🥘
 
-## Getting Started
+**Recetas con Essen** es una aplicación web moderna diseñada para inspirar a los usuarios con recetas deliciosas, prácticas y caseras preparadas utilizando los productos de alta calidad **Essen**. Este proyecto busca facilitar la experiencia de cocina diaria, combinando sabor, estilo y practicidad.
 
-First, run the development server:
+## 🚀 Características
+
+*   **Catálogo de Productos**: Exploración detallada de productos Essen (`src/features/products`).
+*   **Diseño Responsivo**: Interfaz optimizada para dispositivos móviles y de escritorio.
+*   **Sistema de Diseño Personalizado**: Estilos CSS basados en variables para una identidad visual consistente (sin frameworks CSS pesados).
+*   **Integración de Analíticas**: Configuración profesional con Google Tag Manager y Google Analytics.
+*   **Optimización de Fuentes**: Uso de `next/font` con la tipografía **Poppins** para una mejor performance y estética.
+*   **Arquitectura Modular**: Estructura de código organizada por funcionalidades (`features`) para mayor escalabilidad.
+
+## 🛠️ Tecnologías Utilizadas
+
+Este proyecto utiliza un stack moderno y eficiente:
+
+*   **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+*   **Librería UI**: [React 19](https://react.dev/)
+*   **Lenguaje**: [TypeScript](https://www.typescriptlang.org/)
+*   **Estilos**: CSS Modules & CSS Variables (Custom Design System)
+*   **Iconos**: [FontAwesome](https://fontawesome.com/)
+*   **Analíticas**: `@next/third-parties` (Google Analytics, GTM)
+
+## 🏁 Comenzando
+
+Sigue estos pasos para levantar el proyecto en tu entorno local.
+
+### Prerrequisitos
+
+*   Node.js (versión 20 o superior recomendada)
+*   npm, yarn, pnpm o bun
+
+### Instalación
+
+1.  Clona el repositorio:
+    ```bash
+    git clone <URL_DEL_REPOSITORIO>
+    cd ollas-essen
+    ```
+
+2.  Instala las dependencias:
+    ```bash
+    npm install
+    # o
+    pnpm install
+    ```
+
+### Desarrollo
+
+Para iniciar el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> **Nota**: El servidor se iniciará por defecto en el puerto `3008` (configurado en `package.json`).
+> Abre [http://localhost:3008](http://localhost:3008) en tu navegador para ver la aplicación.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Construcción (Build)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Para crear una versión optimizada para producción:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Para previsualizar la versión de producción localmente:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Estructura del Proyecto
 
-## Deploy on Vercel
+El código fuente se encuentra principalmente en la carpeta `src/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/            # Rutas y layouts de Next.js (App Router)
+├── config/         # Configuraciones globales
+├── data/           # Datos estáticos o mock data
+├── features/       # Módulos principales de la aplicación
+│   ├── home/       # Lógica y componentes de la página de inicio
+│   ├── products/   # Funcionalidad relacionada con productos
+│   └── tracking/   # Funcionalidad de seguimiento
+├── layouts/        # Componentes de estructura (Header, Footer)
+└── lib/            # Utilidades y constantes compartidas
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚢 Despliegue
+
+### Script de Despliegue
+El proyecto incluye un script de automatización `deploy.sh`. Asegúrate de tener los permisos necesarios antes de ejecutarlo.
