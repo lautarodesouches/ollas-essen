@@ -1,0 +1,72 @@
+name: Deploy RecetasConEssen
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 1. Obtener código
+        uses: actions/checkout@v4
+
+      - name: 2. Instalar PNPM 10
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: 3. Configurar Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'pnpm'
+
+      - name: 4. Instalar dependencias y Compilar
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm run build
+
+      - name: 5. Preparar Standalone (Mover estáticos)
+        run: |
+          # Next.js standalone no incluye public ni static por defecto.
+          
+          # Copiar carpeta public (imágenes, robots.txt, etc)
+          cp -r public .next/standalone/public
+          
+          # Crear estructura para los archivos estáticos compilados (JS/CSS)
+          mkdir -p .next/standalone/.next
+          cp -r .next/static .next/standalone/.next/static
+
+      - name: 6. Enviar archivos al Servidor (SCP)
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: runcloud
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          # Enviamos SOLO la carpeta optimizada
+          source: ".next/standalone/*"
+          target: "/home/runcloud/webapps/recetasconessen"
+          # Esto elimina la ruta ".next/standalone/" al copiar
+          strip_components: 2
+
+      - name: 7. Reiniciar PM2 en el Servidor
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: runcloud
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            # Agregamos la ruta donde instalamos PM2 recientemente (.npm-global)
+            export PATH=/home/runcloud/.npm-global/bin:$PATH:/usr/bin:/usr/local/bin
+            
+            cd /home/runcloud/webapps/recetasconessen
+            
+            # Usamos una lógica más robusta
+            # Intentamos recargar. Si falla (porque no existe), iniciamos.
+            pm2 reload recetasconessen --update-env || PORT=3008 pm2 start server.js --name "recetasconessen"
+            
+            pm2 save
+            echo "✅ Despliegue completado."
