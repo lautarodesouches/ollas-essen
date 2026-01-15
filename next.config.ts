@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     qualities: [70, 75, 80],
     minimumCacheTTL: 2592000, // 30 días
   },
+  output: "standalone",
 };
 
 export default nextConfig;
