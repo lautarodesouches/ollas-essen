@@ -14,8 +14,8 @@ export default function TermsAndConditions() {
             <h2>1. Aceptación de los Términos</h2>
             <p>
                 Al acceder y utilizar el sitio web{' '}
-                <strong>{NEXT_PUBLIC_BASE_URL}</strong> (en adelante, "el
-                Sitio"), usted acepta cumplir con estos Términos y Condiciones y
+                <strong>{NEXT_PUBLIC_BASE_URL}</strong> (en adelante, &quot;el
+                Sitio&quot;), usted acepta cumplir con estos Términos y Condiciones y
                 con todas las leyes y regulaciones aplicables en la República
                 Argentina.
             </p>

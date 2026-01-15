@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
                     <p>
                         El sitio web{' '}
                         <strong>{NEXT_PUBLIC_BASE_URL}</strong> (en
-                        adelante, "el Sitio") es operado por{' '}
+                        adelante, &quot;el Sitio&quot;) es operado por{' '}
                         <strong>Recetas con Essen</strong>.
                     </p>
                     <p className="mt-2">

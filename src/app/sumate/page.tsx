@@ -224,7 +224,7 @@ export default function Emprender() {
                 <div className={styles.finalCtaContent}>
                     <h2 className={styles.finalCtaTitle}>¿Estás lista para dar el salto?</h2>
                     <p className={styles.finalCtaText}>
-                        El "momento perfecto" no existe, pero este puede ser el comienzo de algo increíble.
+                        El &quot;momento perfecto&quot; no existe, pero este puede ser el comienzo de algo increíble.
                         Animate a escuchar la propuesta completa.
                     </p>
 
