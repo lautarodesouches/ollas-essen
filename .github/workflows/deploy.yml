@@ -1,8 +1,18 @@
-name: Deploy RecetasConEssen
+name: Deploy Production
 on:
   push:
     branches:
       - main
+
+# ----------------------------------------------------------------------
+# ⚙️ VARIABLES DEL PROYECTO
+# ----------------------------------------------------------------------
+env:
+  APP_NAME: "recetasconessen"
+  APP_PORT: "3008"
+  DEPLOY_PATH: "/home/runcloud/webapps/recetasconessen"
+  NODE_VERSION: "24"
+  PNPM_VERSION: "10"
 
 jobs:
   build-and-deploy:
@@ -12,61 +22,94 @@ jobs:
       - name: 1. Obtener código
         uses: actions/checkout@v4
 
-      - name: 2. Instalar PNPM 10
+      - name: 2. Instalar PNPM
         uses: pnpm/action-setup@v4
         with:
-          version: 10
+          version: ${{ env.PNPM_VERSION }}
 
-      - name: 3. Configurar Node.js 24
+      - name: 3. Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: ${{ env.NODE_VERSION }}
           cache: 'pnpm'
 
-      - name: 4. Instalar dependencias y Compilar
+      - name: 4. Cache Next.js
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
+
+      - name: 5. Instalar y Compilar
         run: |
           pnpm install --frozen-lockfile
           pnpm run build
 
-      - name: 5. Preparar Standalone (Mover estáticos)
+      - name: 6. Preparar Standalone
         run: |
-          # Next.js standalone no incluye public ni static por defecto.
-          
-          # Copiar carpeta public (imágenes, robots.txt, etc)
           cp -r public .next/standalone/public
-          
-          # Crear estructura para los archivos estáticos compilados (JS/CSS)
           mkdir -p .next/standalone/.next
           cp -r .next/static .next/standalone/.next/static
 
-      - name: 6. Enviar archivos al Servidor (SCP)
+      - name: 7. Transferir archivos
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: runcloud
           key: ${{ secrets.SSH_KEY }}
           port: 22
-          # Enviamos SOLO la carpeta optimizada
           source: ".next/standalone/*"
-          target: "/home/runcloud/webapps/recetasconessen"
-          # Esto elimina la ruta ".next/standalone/" al copiar
+          target: "${{ env.DEPLOY_PATH }}"
           strip_components: 2
 
-      - name: 7. Reiniciar PM2 en el Servidor
+      - name: 8. Reiniciar PM2 (Script Autocurable)
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: runcloud
           key: ${{ secrets.SSH_KEY }}
           script: |
-            # Agregamos la ruta donde instalamos PM2 recientemente (.npm-global)
-            export PATH=/home/runcloud/.npm-global/bin:$PATH:/usr/bin:/usr/local/bin
+            set -e
+
+            # --- 1. DETECCIÓN DE NODE ---
+            NODE_VER="${{ env.NODE_VERSION }}"
+            # Buscamos la carpeta de la versión 24
+            LATEST_NODE=$(ls -d /home/runcloud/.nvm/versions/node/v$NODE_VER* | sort -V | tail -n 1)
             
-            cd /home/runcloud/webapps/recetasconessen
+            if [ -z "$LATEST_NODE" ]; then
+              echo "❌ Error: No se encontró Node v$NODE_VER."
+              exit 1
+            fi
             
-            # Usamos una lógica más robusta
-            # Intentamos recargar. Si falla (porque no existe), iniciamos.
-            pm2 reload recetasconessen --update-env || PORT=3008 pm2 start server.js --name "recetasconessen"
+            # Activamos Node 24 en el PATH
+            export PATH="$LATEST_NODE/bin:$PATH"
+            echo "✅ Usando Node en: $LATEST_NODE"
+
+            # --- 2. VERIFICACIÓN DE PM2 (Aquí está la magia) ---
+            # Si PM2 ya existe en Node 24, NO hace nada.
+            # Si no existe (porque Node 24 es nuevo), lo instala solo ahí.
+            if ! command -v pm2 &> /dev/null; then
+                echo "⚠️ PM2 no encontrado en Node $NODE_VER. Instalando..."
+                npm install -g pm2
+            else
+                echo "✅ PM2 ya está instalado. Continuando..."
+            fi
+
+            # --- 3. CONFIGURACIÓN ---
+            cd "${{ env.DEPLOY_PATH }}"
+            PM2_NAME="${{ env.APP_NAME }}"
+            PORT_NUM="${{ env.APP_PORT }}"
+
+            # --- 4. REINICIO ---
+            # El "|| true" es para evitar errores si grep no encuentra nada
+            if pm2 list | grep -q "$PM2_NAME"; then
+              echo "🔄 Recargando $PM2_NAME..."
+              pm2 reload "$PM2_NAME" --update-env
+            else
+              echo "🚀 Iniciando $PM2_NAME en puerto $PORT_NUM..."
+              PORT=$PORT_NUM pm2 start server.js --name "$PM2_NAME"
+            fi
             
             pm2 save
             echo "✅ Despliegue completado."
