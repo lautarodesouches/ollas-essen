@@ -4,9 +4,6 @@ on:
     branches:
       - main
 
-# ----------------------------------------------------------------------
-# ⚙️ VARIABLES DEL PROYECTO
-# ----------------------------------------------------------------------
 env:
   APP_NAME: "recetasconessen"
   APP_PORT: "3008"
@@ -22,18 +19,22 @@ jobs:
       - name: 1. Obtener código
         uses: actions/checkout@v4
 
-      - name: 2. Instalar PNPM
+      - name: 2. Crear archivo .env
+        run: |
+          echo "${{ secrets.ENV_PRODUCTION }}" > .env
+
+      - name: 3. Instalar PNPM
         uses: pnpm/action-setup@v4
         with:
           version: ${{ env.PNPM_VERSION }}
 
-      - name: 3. Configurar Node.js
+      - name: 4. Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'pnpm'
 
-      - name: 4. Cache Next.js
+      - name: 5. Cache Next.js
         uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/.next/cache
@@ -41,18 +42,22 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
-      - name: 5. Instalar y Compilar
+      - name: 6. Instalar y Compilar
         run: |
           pnpm install --frozen-lockfile
+          # Next.js lee el .env creado en el paso 2 automáticamente aquí
           pnpm run build
 
-      - name: 6. Preparar Standalone
+      - name: 7. Preparar Standalone
         run: |
           cp -r public .next/standalone/public
           mkdir -p .next/standalone/.next
           cp -r .next/static .next/standalone/.next/static
+          
+          # 💎 IMPORTANTE: Copiamos el .env para que viaje al servidor
+          cp .env .next/standalone/.env
 
-      - name: 7. Transferir archivos
+      - name: 8. Transferir archivos
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -63,7 +68,7 @@ jobs:
           target: "${{ env.DEPLOY_PATH }}"
           strip_components: 2
 
-      - name: 8. Reiniciar PM2 (Script Autocurable)
+      - name: 9. Reiniciar PM2
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -72,39 +77,23 @@ jobs:
           script: |
             set -e
 
-            # --- 1. DETECCIÓN DE NODE ---
+            # --- DETECCIÓN NODE ---
             NODE_VER="${{ env.NODE_VERSION }}"
-            # Buscamos la carpeta de la versión 24
             LATEST_NODE=$(ls -d /home/runcloud/.nvm/versions/node/v$NODE_VER* | sort -V | tail -n 1)
-            
-            if [ -z "$LATEST_NODE" ]; then
-              echo "❌ Error: No se encontró Node v$NODE_VER."
-              exit 1
-            fi
-            
-            # Activamos Node 24 en el PATH
+            if [ -z "$LATEST_NODE" ]; then echo "❌ Error Node"; exit 1; fi
             export PATH="$LATEST_NODE/bin:$PATH"
-            echo "✅ Usando Node en: $LATEST_NODE"
 
-            # --- 2. VERIFICACIÓN DE PM2 (Aquí está la magia) ---
-            # Si PM2 ya existe en Node 24, NO hace nada.
-            # Si no existe (porque Node 24 es nuevo), lo instala solo ahí.
-            if ! command -v pm2 &> /dev/null; then
-                echo "⚠️ PM2 no encontrado en Node $NODE_VER. Instalando..."
-                npm install -g pm2
-            else
-                echo "✅ PM2 ya está instalado. Continuando..."
-            fi
+            # --- AUTOCURACIÓN PM2 ---
+            if ! command -v pm2 &> /dev/null; then npm install -g pm2; fi
 
-            # --- 3. CONFIGURACIÓN ---
+            # --- CONFIGURACIÓN ---
             cd "${{ env.DEPLOY_PATH }}"
             PM2_NAME="${{ env.APP_NAME }}"
             PORT_NUM="${{ env.APP_PORT }}"
 
-            # --- 4. REINICIO ---
-            # El "|| true" es para evitar errores si grep no encuentra nada
             if pm2 list | grep -q "$PM2_NAME"; then
               echo "🔄 Recargando $PM2_NAME..."
+              # --update-env refresca cambios si modificaste el secreto
               pm2 reload "$PM2_NAME" --update-env
             else
               echo "🚀 Iniciando $PM2_NAME en puerto $PORT_NUM..."
