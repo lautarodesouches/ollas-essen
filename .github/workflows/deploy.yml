@@ -14,7 +14,7 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 1. Obtener código
         uses: actions/checkout@v4
@@ -32,7 +32,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: 5. Cache Next.js
         uses: actions/cache@v4
@@ -48,14 +48,18 @@ jobs:
           # Next.js lee el .env creado en el paso 2 automáticamente aquí
           pnpm run build
 
-      - name: 7. Preparar Standalone
+      - name: 7. Preparar Standalone (Tarball)
         run: |
           cp -r public .next/standalone/public
           mkdir -p .next/standalone/.next
           cp -r .next/static .next/standalone/.next/static
-          
+
           # 💎 IMPORTANTE: Copiamos el .env para que viaje al servidor
           cp .env .next/standalone/.env
+
+          # Comprimir TODO en un archivo tar.gz
+          cd .next/standalone
+          tar -czf ../../deploy.tar.gz .
 
       - name: 8. Transferir archivos
         uses: appleboy/scp-action@master
@@ -64,9 +68,8 @@ jobs:
           username: runcloud
           key: ${{ secrets.SSH_KEY }}
           port: 22
-          source: ".next/standalone/*"
+          source: "deploy.tar.gz"
           target: "${{ env.DEPLOY_PATH }}"
-          strip_components: 2
 
       - name: 9. Reiniciar PM2
         uses: appleboy/ssh-action@master
@@ -88,6 +91,14 @@ jobs:
 
             # --- CONFIGURACIÓN ---
             cd "${{ env.DEPLOY_PATH }}"
+
+            # Descomprimir la nueva versión
+            if [ -f "deploy.tar.gz" ]; then
+              echo "📦 Extrayendo nueva versión..."
+              tar -xzf deploy.tar.gz
+              rm deploy.tar.gz
+            fi
+
             PM2_NAME="${{ env.APP_NAME }}"
             PORT_NUM="${{ env.APP_PORT }}"
 
@@ -99,6 +110,6 @@ jobs:
               echo "🚀 Iniciando $PM2_NAME en puerto $PORT_NUM..."
               PORT=$PORT_NUM pm2 start server.js --name "$PM2_NAME"
             fi
-            
+
             pm2 save
             echo "✅ Despliegue completado."
