@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import { generateSlug, getProducts } from '@/src/features/products/utils'
 import { NEXT_PUBLIC_BASE_URL } from '@/src/lib/constants'
 
+export const dynamic = 'force-static'
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const baseUrl = NEXT_PUBLIC_BASE_URL
