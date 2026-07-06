@@ -1,5 +1,8 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || (isProd ? "/ollas-essen" : "");
+
 const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -7,8 +10,11 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     qualities: [70, 75, 80],
     minimumCacheTTL: 2592000, // 30 días
+    unoptimized: true, // Required for static export in Next.js
   },
-  output: "standalone",
+  output: "export", // Output static HTML/CSS/JS
+  basePath: basePath,
 };
 
 export default nextConfig;
+

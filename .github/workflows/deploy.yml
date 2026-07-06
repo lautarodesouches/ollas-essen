@@ -1,40 +1,47 @@
-name: Deploy Production
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
-env:
-  APP_NAME: "recetasconessen"
-  APP_PORT: "3008"
-  DEPLOY_PATH: "/home/runcloud/webapps/recetasconessen"
-  NODE_VERSION: "24"
-  PNPM_VERSION: "10"
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: 1. Obtener código
+      - name: 1. Checkout repository
         uses: actions/checkout@v4
 
-      - name: 2. Crear archivo .env
+      - name: 2. Create .env file from secrets
         run: |
           echo "${{ secrets.ENV_PRODUCTION }}" > .env
 
-      - name: 3. Instalar PNPM
+      - name: 3. Install PNPM
         uses: pnpm/action-setup@v4
         with:
-          version: ${{ env.PNPM_VERSION }}
+          version: 10
 
-      - name: 4. Configurar Node.js
+      - name: 4. Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version: 20
           cache: "pnpm"
 
-      - name: 5. Cache Next.js
+      - name: 5. Cache Next.js build
         uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/.next/cache
@@ -42,74 +49,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
-      - name: 6. Instalar y Compilar
-        run: |
-          pnpm install --frozen-lockfile
-          # Next.js lee el .env creado en el paso 2 automáticamente aquí
-          pnpm run build
+      - name: 6. Install dependencies
+        run: pnpm install --frozen-lockfile
 
-      - name: 7. Preparar Standalone (Tarball)
-        run: |
-          cp -r public .next/standalone/public
-          mkdir -p .next/standalone/.next
-          cp -r .next/static .next/standalone/.next/static
+      - name: 7. Build and export static files
+        run: pnpm run build
 
-          # 💎 IMPORTANTE: Copiamos el .env para que viaje al servidor
-          cp .env .next/standalone/.env
-
-          # Comprimir TODO en un archivo tar.gz
-          cd .next/standalone
-          tar -czf ../../deploy.tar.gz .
-
-      - name: 8. Transferir archivos
-        uses: appleboy/scp-action@master
+      - name: 8. Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          host: ${{ secrets.HOST }}
-          username: runcloud
-          key: ${{ secrets.SSH_KEY }}
-          port: 22
-          source: "deploy.tar.gz"
-          target: "${{ env.DEPLOY_PATH }}"
+          path: ./out
 
-      - name: 9. Reiniciar PM2
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: runcloud
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            set -e
+      - name: 9. Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
-            # --- DETECCIÓN NODE ---
-            NODE_VER="${{ env.NODE_VERSION }}"
-            LATEST_NODE=$(ls -d /home/runcloud/.nvm/versions/node/v$NODE_VER* | sort -V | tail -n 1)
-            if [ -z "$LATEST_NODE" ]; then echo "❌ Error Node"; exit 1; fi
-            export PATH="$LATEST_NODE/bin:$PATH"
-
-            # --- AUTOCURACIÓN PM2 ---
-            if ! command -v pm2 &> /dev/null; then npm install -g pm2; fi
-
-            # --- CONFIGURACIÓN ---
-            cd "${{ env.DEPLOY_PATH }}"
-
-            # Descomprimir la nueva versión
-            if [ -f "deploy.tar.gz" ]; then
-              echo "📦 Extrayendo nueva versión..."
-              tar -xzf deploy.tar.gz
-              rm deploy.tar.gz
-            fi
-
-            PM2_NAME="${{ env.APP_NAME }}"
-            PORT_NUM="${{ env.APP_PORT }}"
-
-            if pm2 list | grep -q "$PM2_NAME"; then
-              echo "🔄 Recargando $PM2_NAME..."
-              # --update-env refresca cambios si modificaste el secreto
-              pm2 reload "$PM2_NAME" --update-env
-            else
-              echo "🚀 Iniciando $PM2_NAME en puerto $PORT_NUM..."
-              PORT=$PORT_NUM pm2 start server.js --name "$PM2_NAME"
-            fi
-
-            pm2 save
-            echo "✅ Despliegue completado."
