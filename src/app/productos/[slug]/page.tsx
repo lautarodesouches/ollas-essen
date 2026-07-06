@@ -36,8 +36,7 @@ interface Props {
 
 // Performance Optimizations
 export const dynamic = 'force-static'
-export const revalidate = 3600
-export const dynamicParams = true // Allow on-demand ISR for new products
+export const dynamicParams = false // Disable on-demand generation since we are exporting statically
 
 export async function generateStaticParams() {
     const products = await getProducts()
