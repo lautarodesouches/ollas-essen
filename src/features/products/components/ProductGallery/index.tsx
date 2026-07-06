@@ -3,6 +3,7 @@
 import { useState, useRef, MouseEvent, UIEvent } from 'react'
 import Image from 'next/image'
 import styles from './page.module.css'
+import { getAssetPath } from '@/src/lib/constants'
 
 interface Props {
     images: string[]
@@ -53,7 +54,7 @@ export default function ProductGallery({ images, productName }: Props) {
                 {images.map((src, i) => (
                     <div key={`mob-${i}`} className={styles.snapItem}>
                         <Image
-                            src={`/images/products/${src}`}
+                            src={getAssetPath(`/images/products/${src}`)}
                             alt={`${productName} - Vista ${i + 1}`}
                             width={600}
                             height={600}
@@ -89,7 +90,7 @@ export default function ProductGallery({ images, productName }: Props) {
                 >
                     <div className={styles.zoomContainer}>
                         <Image
-                            src={`/images/products/${images[activeIndex]}`}
+                            src={getAssetPath(`/images/products/${images[activeIndex]}`)}
                             alt={`${productName} - Vista Principal`}
                             fill
                             className={styles.desktopImage}
@@ -113,7 +114,7 @@ export default function ProductGallery({ images, productName }: Props) {
                                 aria-label={`Ver imagen ${i + 1}`}
                             >
                                 <Image
-                                    src={`/images/products/${src}`}
+                                    src={getAssetPath(`/images/products/${src}`)}
                                     alt={`${productName} - Miniatura ${i + 1}`}
                                     fill
                                     className={styles.thumbImg}

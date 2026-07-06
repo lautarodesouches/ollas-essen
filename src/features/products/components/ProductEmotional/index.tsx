@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import { getAssetPath } from '@/src/lib/constants'
 
 interface Props {
     descripcion: string
@@ -20,6 +21,10 @@ export default function ProductEmotional({ descripcion, comensales, videos = [],
     // Prepend path for local videos if needed
     if (isLocalVideo && mediaUrl && !mediaUrl.startsWith('/') && !mediaUrl.startsWith('http')) {
         mediaUrl = `/videos/${mediaUrl}`;
+    }
+
+    if (mediaUrl) {
+        mediaUrl = getAssetPath(mediaUrl);
     }
 
     return (

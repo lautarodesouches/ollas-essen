@@ -6,6 +6,7 @@ import { Product } from '../../types'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { getAssetPath } from '@/src/lib/constants'
 
 interface Props {
     product: Product
@@ -22,7 +23,7 @@ export default function Card({ product }: Props) {
         >
             <div className={styles.imageWrapper}>
                 <Image
-                    src={`/images/products/${product.imagenes[0]}`}
+                    src={getAssetPath(`/images/products/${product.imagenes[0]}`)}
                     alt={`${productTitle} - Línea ${product.linea}`}
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 250px"

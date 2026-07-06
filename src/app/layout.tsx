@@ -4,7 +4,7 @@ import './globals.css'
 import Header from '@/src/layouts/Header'
 import Footer from '@/src/layouts/Footer'
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
-import { NEXT_PUBLIC_GA_ADS_ID } from '../lib/constants'
+import { NEXT_PUBLIC_GA_ADS_ID, getAssetPath } from '../lib/constants'
 
 const poppins = Poppins({
     weight: ['300', '400', '700'],
@@ -25,7 +25,7 @@ export default function RootLayout({
     return (
         <html lang="es">
             <head>
-                <link rel="icon" href="/images/favicon.ico" sizes="any" />
+                <link rel="icon" href={getAssetPath('/images/favicon.ico')} sizes="any" />
                 <link rel="preconnect" href="https://www.googletagmanager.com" />
                 <link rel="preconnect" href="https://www.google-analytics.com" />
                 <link rel="preconnect" href="https://googleads.g.doubleclick.net" />

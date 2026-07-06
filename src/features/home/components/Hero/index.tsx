@@ -2,12 +2,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './page.module.css'
 import { ROUTES } from '@/src/config/routes'
+import { getAssetPath } from '@/src/lib/constants'
 
 export default function Hero() {
     return (
         <section className={styles.start}>
             <Image
-                src="/images/kitchen.jpg"
+                src={getAssetPath('/images/kitchen.jpg')}
                 alt="Cocina moderna con productos Essen"
                 fill
                 className={styles.startImage}

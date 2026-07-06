@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import { getAssetPath } from '@/src/lib/constants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandHolding, faLock, faLayerGroup } from '@fortawesome/free-solid-svg-icons'
 
@@ -19,7 +20,7 @@ export default function ProductTechnical({ images = [] }: Props) {
                     <div className={styles.imagePlaceholder}>
                         {showImages ? (
                             <Image
-                                src={`/images/products/${images[0]}`}
+                                src={getAssetPath(`/images/products/${images[0]}`)}
                                 alt="Mango Seguro"
                                 width={150}
                                 height={150}
@@ -40,7 +41,7 @@ export default function ProductTechnical({ images = [] }: Props) {
                     <div className={styles.imagePlaceholder}>
                         {showImages ? (
                             <Image
-                                src={`/images/products/${images[1]}`}
+                                src={getAssetPath(`/images/products/${images[1]}`)}
                                 alt="Cierre Perfecto"
                                 width={150}
                                 height={150}
@@ -61,7 +62,7 @@ export default function ProductTechnical({ images = [] }: Props) {
                     <div className={styles.imagePlaceholder}>
                         {showImages ? (
                             <Image
-                                src={`/images/products/${images[2]}`}
+                                src={getAssetPath(`/images/products/${images[2]}`)}
                                 alt="Aluminio Fundido"
                                 width={150}
                                 height={150}

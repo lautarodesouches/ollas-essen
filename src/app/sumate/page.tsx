@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import { WHATSAPP__NUMBER } from '@/src/lib/constants'
+import { WHATSAPP__NUMBER, getAssetPath } from '@/src/lib/constants'
 import TrackedLink from '@/src/features/tracking/components/TrackedLink'
 
 // Import de Iconos
@@ -67,7 +67,7 @@ export default function Emprender() {
                 </div>
                 <div className={styles.heroImage}>
                     <Image
-                        src="/images/join/hero.jpg"
+                        src={getAssetPath('/images/join/hero.jpg')}
                         alt="Emprendedora feliz"
                         fill
                         priority
@@ -213,7 +213,7 @@ export default function Emprender() {
                     </div>
                     <div className={styles.supportImage}>
                         <div className={styles.supportImgPlaceholder}>
-                            <Image src="/images/join/support.jpg" alt="Comunidad activa" fill className={styles.imgCover} />
+                            <Image src={getAssetPath('/images/join/support.jpg')} alt="Comunidad activa" fill className={styles.imgCover} />
                         </div>
                     </div>
                 </div>
